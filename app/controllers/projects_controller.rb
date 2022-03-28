@@ -15,7 +15,7 @@ class ProjectsController < ApplicationController
   def update
     @project = Project.update(project_params)
     if @project.save
-      redirect to project_path(params[:id])
+      redirect_to project_path(params[:id])
     else
       render :edit
     end

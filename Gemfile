@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.7'
 # gem form / fontawesome /
 gem "autoprefixer-rails", "10.2.5"
 gem "font-awesome-sass", "~> 5.6.1"
-gem "simple_form", github: 'heartcombo/simple_form'
+gem "simple_form"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
