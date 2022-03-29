@@ -10,8 +10,10 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-        <%= render 'shared/navbar' %>
-        <%= render 'shared/sidebar' %>
+    <% if user_signed_in? %>
+      <%= render 'shared/navbar' %>
+      <%= render 'shared/sidebar' %>
+    <% end %>
       <%= yield %>
       <%= render 'shared/flashes' %>
       <p class="notice"><%= notice %></p>

@@ -1,30 +1,11 @@
 <div class= "container">
 	<div class= "col-6 offset-5">
 		<div class= "box-shadow">
-			<h1>Create a new project<h1>
+			<h2>Create a new project<h2>
 
-			<%= simple_form_for(@project) do |f| %>
-				<%= f.input :name, label: false, placeholder: 'Name' %>
-				<%= f.input :description, label: false, placeholder: 'Description' %>
-        <%= f.input :start_date, label: false,as: :date, placeholder: 'Start Date' %>
-        <%= f.input :end_date, label: false, as: :date, placeholder: 'End Date' %>
-        <%= f.input :number_of_day, label: false, placeholder: 'Number of days' %>
-				<%= f.submit class: 'btn btn-primary' %>
-        <%#= f.input :user_id, label: false, placeholder: 'User' %>
-			<% end %>
+        <%= render "form", project: @project %>
 
 			<%= link_to 'Back to home', '/', class: 'btn btn-outline-primary' %>
 		</div>
 	</div>
 </div>
-
-
-<%# t.string "name"
-    t.text "description"
-    t.integer "user_id", null: false
-    t.date "start_date"
-    t.date "end_date"
-    t.integer "number_of_day"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_projects_on_user_id" %>

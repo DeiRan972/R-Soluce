@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: %i[show edit destroy]
+  before_action :set_project, only: %i[show edit update destroy]
 
   def new
     @project = Project.new
@@ -20,15 +20,15 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    @project = Project.update(project_params)
-    if @project.save
-      redirect_to project_path(params[:id])
+    if @project.update(project_params)
+      redirect_to project_path(@project), notice: 'Projet bien mis à jour'
     else
       render :edit
     end
   end
 
   def show
+    @task = Task.new
   end
 
   def destroy

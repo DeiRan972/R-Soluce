@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_29_133451) do
+ActiveRecord::Schema.define(version: 2022_03_29_160343) do
 
   create_table "daysoffs", force: :cascade do |t|
     t.date "date"
@@ -54,7 +54,9 @@ ActiveRecord::Schema.define(version: 2022_03_29_133451) do
     t.decimal "tjm"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
     t.index ["project_id"], name: "index_tasks_on_project_id"
+    t.index ["user_id"], name: "index_tasks_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -78,4 +80,5 @@ ActiveRecord::Schema.define(version: 2022_03_29_133451) do
 
   add_foreign_key "projects", "users"
   add_foreign_key "tasks", "projects"
+  add_foreign_key "tasks", "users"
 end
