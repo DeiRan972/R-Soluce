@@ -1,0 +1,23 @@
+<div class="container py-5 h-100">
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+      <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+              <%= simple_form_for([@task.project, @task]) do |f| %>
+                <div class="form-outline form-white mb-4">
+                  <%= f.input :name, label: false, placeholder: 'Enter the new event'%>
+                </div>
+                <div class="form-outline form-white mb-4">
+                  <%= f.input :description, label: false, placeholder: 'Enter the description'%>
+                </div>
+                <div class="form-outline form-white mb-4">
+                  <%= f.input :estimate_time, label: false, placeholder: 'Enter your estimate_time'%>
+                </div>
+                  <%= f.submit class: 'btn btn-primary mt-4' %>
+              <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
