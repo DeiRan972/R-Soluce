@@ -5,6 +5,13 @@ class ProjectsController < ApplicationController
     @project = Project.new
   end
 
+  def create
+    @project = Project.new(project_params)
+    raise
+    @project.user = current_user
+    @project.save
+  end
+
   def index
     @projects = Project.all
   end
