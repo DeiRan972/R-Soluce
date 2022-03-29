@@ -5,16 +5,19 @@ class TasksController < ApplicationController
   end
 
   def show
+    @task_created = Task.order(created_at: :DESC)
   end
 
   def new
+    @project = Project.find(params[:project_id])
     @task = Task.new
   end
 
   def create
     @task = Task.new(task_params)
+    @task.project = @project
     if @task.save
-      redirect_to tasks_path
+      redirect_to tasks_path, notice: 'new task create'
     else
       render :new
     end
