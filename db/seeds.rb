@@ -8,14 +8,14 @@
 
 puts 'cleaning database'
 
-Project.destroy_all
-p 'projets destroyed'
-Task.destroy_all
-p 'tasks destroyed'
-User.destroy_all
-p 'users destroyed'
 Role.destroy_all
 p 'role destroyed'
+Task.destroy_all
+p 'tasks destroyed'
+Project.destroy_all
+p 'projets destroyed'
+User.destroy_all
+p 'users destroyed'
 
 p 'creating roles'
 role1 = Role.create!(level: 'junior')
@@ -32,7 +32,7 @@ projet1 = Project.create!(user: user1, name: 'Une application de journal personn
 projet2 = Project.create!(user: user2, name: 'Un tracker de dépenses', description: 'tenir son budget', start_date: '24/03/2022', end_date: '12/03/2022')
 
 p 'creating tasks'
-Task.create!(project: projet1, name: 'creation DB', description: 'diverses tables', status: 'début', estimate_time: '2')
-Task.create!(project: projet1, name: 'controleurs', description: 'maj', status: 'en cours', estimate_time: '1')
-Task.create!(project: projet2, name: 'login pages', description: 'creation', status: 'début', estimate_time: '1')
-Task.create!(project: projet2, name: 'home page', description: 'css', status: 'en cours', estimate_time: '2')
+Task.create!(user: user1, project: projet1, name: 'creation DB', description: 'diverses tables', status: 'début', estimate_time: '2', real_time:'5', tjm: '150')
+Task.create!(user: user1, project: projet1, name: 'controleurs', description: 'maj', status: 'en cours', estimate_time: '1', real_time:'5', tjm: '150')
+Task.create!(user: user2, project: projet2, name: 'login pages', description: 'creation', status: 'début', estimate_time: '1', real_time:'5', tjm: '150')
+Task.create!(user: user2, project: projet2, name: 'home page', description: 'css', status: 'en cours', estimate_time: '2', real_time:'5', tjm: '150')
