@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'teams/index'
   get '/dashboard', to: 'dashboard#index'
   get '/team', to: 'teams#index'
   devise_for :users
