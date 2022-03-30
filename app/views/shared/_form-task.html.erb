@@ -9,7 +9,7 @@
                   <%= f.input :name, label: false, placeholder: 'Enter the new event'%>
                 </div>
                  <div class="form-outline form-white mb-4">
-                  <%= f.association :user, label: false, placeholder: 'Enter the new event'%>
+                  <%= f.association :user, as: :select,label: 'Assign someone',label_method: :first_name, value_method: :id, include_blank: false  %>
                 </div>
                 <div class="form-outline form-white mb-4">
                   <%= f.input :description, label: false, placeholder: 'Enter the description'%>
