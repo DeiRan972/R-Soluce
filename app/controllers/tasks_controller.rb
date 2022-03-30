@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: %i[show edit destroy update]
+  before_action :set_task, only: %i[show edit destroy update TJM]
   before_action :set_project_task, only: %i[index new create update]
 
   def index
