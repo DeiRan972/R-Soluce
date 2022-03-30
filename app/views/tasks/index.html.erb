@@ -20,8 +20,10 @@
           </div>
       <% end %>
   <% end %>
-  <div class="btn btn-show">
+  <div class="btn btn-show col-12 mx-auto">
     <%= link_to 'New Project', new_project_task_path %>
   </div>
-  <h1 class="col-6 mx auto text-right"> <%= @tasks.count %> </h1>
+    <div class="text-center">
+      <h1>  - <%= @tasks.count %> - </h1>
+    </div>
 </div>
