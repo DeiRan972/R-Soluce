@@ -30,11 +30,13 @@
          <%end%></ul>
         </div>
 
-        <%= link_to "Update #{@project.name}",
+        <div>
+          <%= link_to "Update #{@project.name}",
              edit_project_path(@project),
              data: { confirm: "Are you sure?" } %>
         </div>
 
+        <div>
          <%= link_to "New task for #{@project.name}",
              new_project_task_path(@project),
              data: { confirm: "Are you sure?" } %>
@@ -47,8 +49,10 @@
           <%= f.submit %>
         <% end %>
 
+        <%= render "shared/form-task", task: [@project, @task]%>
 
-     </div>
+
+      </div>
 
     </div>
   </div>
