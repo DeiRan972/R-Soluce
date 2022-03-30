@@ -1,0 +1,16 @@
+<div class="container col-8 mx-auto p-4">
+    <div class="text-center">
+      <h1>Teams Mate</h1>
+    </div>
+  <div class="row d-flex">
+    <% @users.each do |user| %>
+      <div class="card text-center m-4" style="width: 18rem;">
+        <%= image_tag "#{user.avatar}", class: "avatar-team mx-auto pt-4", alt: "avatar" %>
+        <div class="card-body">
+          <p><%= user.first_name %> <%= user.last_name %></p>
+          <p><%= user.role.level %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
