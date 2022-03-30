@@ -6,12 +6,13 @@
         </div>
      <div class = card>
        <div class = content>
-        <div class = card>
-         <h3><%= @project.name %></h3>
-         <p><%= @project.description %></p>
-         <p><%= @project.start_date %></p>
-         <p><%= @project.end_date %></p>
-         <p><%= @project.number_of_day %></p>
+          <div class = card>
+           <h3><%= @project.name %></h3>
+           <p><%= @project.description %></p>
+           <p><%= @project.start_date %></p>
+           <p><%= @project.end_date %></p>
+           <p><%= @project.number_of_day %></p>
+          </div>
         </div>
 
         <div class = card>
@@ -42,15 +43,7 @@
              data: { confirm: "Are you sure?" } %>
         </div>
 
-        <%= simple_form_for [@project, @task] do |f|%>
-          <%= f.input :name %>
-          <%= f.input :description %>
-          <%= f.association :user %>
-          <%= f.submit %>
-        <% end %>
-
         <%= render "shared/form-task", task: [@project, @task]%>
-
 
       </div>
 
