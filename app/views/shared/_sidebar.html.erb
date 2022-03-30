@@ -2,34 +2,35 @@
 <div class="sidebar-container">
   <div class="sidebar-logo">
     <p>R-soluce</p>
+
   </div>
   <ul class="sidebar-navigation">
     <li class="header">Home</li>
     <li>
-      <%= link_to  root_path, remote: true  do %>
-        <a href="#"><i class="fa fa-home" aria-hidden="true"></i> Homepage</a>
+      <%= link_to  root_path  do %>
+        <i class="fa fa-home" aria-hidden="true"></i> Homepage
       <% end %>
     </li>
     <li>
-      <a href="#">
+      <%= link_to  dashboard_path  do %>
         <i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard
-      </a>
+      <% end %>
     </li>
     <li>
-      <a href="#">
-        <i class="fa-solid fa-file-image"></i>  Project</a>
+      <%= link_to  projects_path  do %>
+         <i class="fa-solid fa-file-image"></i>  Project
+        <li>
+          <%#= link_to  project_task_path(@current_user.task)  do %>
+            <i class="fa-solid fa-list-check"></i> Task
+          <%# end %>
+         </li>
+      <% end %>
     </li>
     <li class="header">auther action</li>
     <li>
-      <a href="#"><i class="fa-solid fa-list-check"></i> Task</a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa fa-users" aria-hidden="true"></i></i>teams</a>
-    </li>
-    <li>
-      <a href="#">
-        <i class="fa fa-info-circle" aria-hidden="true"></i> Information</a>
+      <%= link_to  root_path, remote: true  do %>
+        <i class="fa fa-users" aria-hidden="true"></i>teams
+      <% end %>
     </li>
   </ul>
 </div>
