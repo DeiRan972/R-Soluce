@@ -1,20 +1,20 @@
 class TasksController < ApplicationController
   before_action :set_task, only: %i[show edit destroy]
+
   def index
-    @tasks = Task.all
+    @project = Project.find(params[:project_id])
+    @tasks = Task.where(project: @project)
   end
 
   def show
-    @task_created = Task.order(created_at: :DESC)
   end
 
   def new
-    @project = Project.find(params[project_id])
+    @project = Project.find(params[:project_id])
     @task = Task.new
   end
 
   def create
-    @project = Project.find(params[:project_id])
     @task = Task.new(task_params)
     @task.project = @project
     if @task.save

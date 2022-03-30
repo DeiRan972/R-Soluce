@@ -1,17 +1,28 @@
 .card-product {
+  position: relative;
   overflow: hidden;
   height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px #130b38;;
   display: flex;
   align-items: center;
+  transition: 0.8s all ease-in-out;
+  left: 0px;
+  top:0;
 }
 
-.card-product img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+.card-product:hover {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px #130b38;;
+  display: flex;
+  align-items: center;
+  left: 20px;
+  top: -10px;
 }
+
+
 
 .card-product h2 {
   font-size: 16px;

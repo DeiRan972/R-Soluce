@@ -2,6 +2,8 @@
   background-color: #130b38 ;
   padding: 15px;
   color: white;
+  box-shadow: -2px 5px 10px #130b38;
+  transition: 0.5s all ease-in-out;
 }
 .btn-show a{
   color: white;
@@ -13,4 +15,5 @@
 .btn-show:hover{
   background-color: white;
   border: 1px solid #130b38 ;
+  color: #130b38;
 }

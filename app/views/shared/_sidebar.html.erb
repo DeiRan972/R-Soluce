@@ -1,33 +1,4 @@
 
- <%# <div class="sidenav">
-
-    <div class="container">
-      <div class="list">
-        <a href="#"><i class="fa-solid fa-gauge"> </i> Dashboard</a>
-      </div>
-    </div> %>
-    <%#= if current_user.admin do %>
-     <%# <div class="container">
-      <div class="list">
-        <a href="#">Project</a>
-      </div>
-    </div> %>
-    <%# end %>
-     <%# <div class="container">
-      <div class="list">
-
-        <a href="#"> Tasks</a>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="list">
-
-        <a href="#"> <i class="fa-solid fa-screen-users"></i> Equipe</a>
-      </div>
-    </div>
-
-</div> %>
 <div class="sidebar-container">
   <div class="sidebar-logo">
     <p>R-soluce</p>
@@ -35,9 +6,9 @@
   <ul class="sidebar-navigation">
     <li class="header">Home</li>
     <li>
-      <a href="#">
-        <i class="fa fa-home" aria-hidden="true"></i> Homepage
-      </a>
+      <%= link_to  root_path, remote: true  do %>
+        <a href="#"><i class="fa fa-home" aria-hidden="true"></i> Homepage</a>
+      <% end %>
     </li>
     <li>
       <a href="#">
