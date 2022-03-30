@@ -1,8 +1,8 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: %i[show edit destroy]
+  before_action :set_task, only: %i[show edit destroy update]
+  before_action :set_project_task, only: %i[index new create update]
 
   def index
-    @project = Project.find(params[:project_id])
     @tasks = Task.where(project: @project)
   end
 
@@ -10,15 +10,15 @@ class TasksController < ApplicationController
   end
 
   def new
-    @project = Project.find(params[:project_id])
     @task = Task.new
   end
 
   def create
     @task = Task.new(task_params)
     @task.project = @project
+    @task.status = false
     if @task.save
-      redirect_to tasks_path, notice: 'new task create'
+      redirect_to project_tasks_path(@project), notice: 'new task create'
     else
       render :new
     end
@@ -28,9 +28,8 @@ class TasksController < ApplicationController
   end
 
   def update
-    @task = Task.update(task_params)
-    if @task.save
-      redirect_to task_path(params[:id])
+    if @task.update(task_params)
+      redirect_to project_task_path([@task.project, @task])
     else
       render :edit
     end
@@ -47,6 +46,10 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:name, :description, :status, :project_id, :estimate_time, :real_time, :tjm)
+    params.require(:task).permit(:name, :description, :status, :project_id, :estimate_time, :real_time, :tjm, :user_id)
+  end
+
+  def set_project_task
+    @project = Project.find(params[:project_id])
   end
 end
