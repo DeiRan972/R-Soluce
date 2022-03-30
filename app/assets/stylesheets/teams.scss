@@ -1,0 +1,70 @@
+// Place all the styles related to the teams controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+h1{
+  font-family: 'Roboto', sans-serif;
+}
+
+.card-team {
+  position: relative;
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px #130b38;;
+  display: flex;
+  align-items: center;
+  transition: 0.8s all ease-in-out;
+  left: 0px;
+  top:0;
+}
+
+.card-team:hover {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px #130b38;;
+  display: flex;
+  align-items: center;
+  left: 0px;
+  top: 30px;
+}
+
+
+
+.card-team h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-team h3 {
+  font-size: 14px;
+  text-decoration: underline;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+.card-team p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+ a{
+  text-decoration: none;
+  color: black;
+}
+
+.card-team .card-team-infos {
+  padding: 16px;
+}
+
+.list-inline-item p{
+  text-align: center;
+}
+
+.list-inline{
+  align-items: center;
+}
