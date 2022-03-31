@@ -1,8 +1,20 @@
-
 <div class="sidebar-container">
   <div class="sidebar-logo">
-    <p>R-soluce</p>
-
+    <%= link_to root_path,  class: "navbar-brand" do %>
+      <%= image_tag "https://www.r-itconsulting.fr/images/structures/logo.png" %>
+    <% end %>
+  </div>
+  <div class="sidebar-logo d-flex">
+    <% if user_signed_in? %>
+          <li class="nav-item dropdown">
+          <div class="avatar-team">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/Deiran972", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          </div>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            </div>
+     <% end %>
   </div>
   <ul class="sidebar-navigation">
     <li class="header">Home</li>
@@ -19,12 +31,13 @@
     <li>
       <%= link_to  projects_path  do %>
          <i class="fa-solid fa-file-image"></i>  Project
+       <li>
+        <% end %>
         <li>
-          <%#= link_to  project_task_path(@current_user.task)  do %>
+          <%= link_to tasks_user_path do %>
             <i class="fa-solid fa-list-check"></i> Task
-          <%# end %>
-         </li>
-      <% end %>
+          <% end %>
+        </li>
     </li>
     <li class="header">other action</li>
     <li>

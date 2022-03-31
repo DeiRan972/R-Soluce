@@ -5,13 +5,15 @@
     </div>
   <div class="row d-flex">
     <% @users.each do |user| %>
+
       <div class="card-team text-center m-4" style="width: 18rem;">
         <%= image_tag "#{user.avatar}", class: "avatar-team mx-auto pt-4 pb-4", alt: "avatar" %>
         <div class="card-body">
           <h3><%= user.first_name %> <%= user.last_name %></h3>
-          <p><%= user.role.level %></p>
+          <p> Status - <%= user.role.level %></p>
         </div>
       </div>
+
     <% end %>
   </div>
 </div>

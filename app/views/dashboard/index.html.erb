@@ -1,13 +1,62 @@
-<div class="container col-6 mx-auto">
 
-<h1><%= @projects.name %></h1>
+<!------ Include the above in your HEAD tag ---------->
+<link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap" rel="stylesheet">
+<div class="task-manager">
+  <div class="left-bar">
+
+  </div>
+  <div class="page-content">
+    <div class="header">Today Tasks</div>
+    <div class="content-categories">
+      <div class="label-wrapper">
+        <input class="nav-item" name="nav" type="radio" id="opt-1">
+        <label class="category" for="opt-1">All</label>
+      </div>
+      <div class="label-wrapper">
+        <input class="nav-item" name="nav" type="radio" id="opt-2" checked>
+        <label class="category" for="opt-2">Important</label>
+      </div>
+      <div class="label-wrapper">
+        <input class="nav-item" name="nav" type="radio" id="opt-3">
+        <label class="category" for="opt-3">Notes</label>
+      </div>
+      <div class="label-wrapper">
+        <input class="nav-item" name="nav" type="radio" id="opt-4">
+        <label class="category" for="opt-4">Links</label>
+      </div>
+    </div>
+    <div class="tasks-wrapper">
+      <div class="task">
+        <input class="task-item" name="task" type="checkbox" id="item-1" checked>
+        <label for="item-1">
+          <span class="label-text">Dashboard Design Implementation</span>
+        </label>
+        <span class="tag approved">Approved</span>
+      </div>
+      <div class="task">
+        <input class="task-item" name="task" type="checkbox" id="item-2" checked>
+        <label for="item-2">
+          <span class="label-text">Create a userflow</span>
+        </label>
+        <span class="tag progress">In Progress</span>
+      </div>
+      <div class="task">
+        <input class="task-item" name="task" type="checkbox" id="item-5">
+        <label for="item-5">
+          <span class="label-text">Create a Web Application Design</span>
+         </label>
+        <span class="tag review">In Review</span>
+      </div>
+    </div>
+  </div>
+ <div class="right-bar">
+    <div class="page-content">
+      <div class="header"></div>
+      <div class="right-content">
+        <%= week_calendar(number_of_weeks: 1) do |date| %>
+         <%= date %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="dashboard">
-        <div class="dashboard-card main">
-          <div class="dashboard-card-content">
-            <img src="images/seb.jpeg" alt="" width="150" class="img-circle">
-            <h2>Sebastien Saunier</h2>
-            <p>CTO at Le Wagon</p>
-            <a href="#" class="btn btn-primary btn-lg">Get in touch</a>
-          </div>
-        </div>
