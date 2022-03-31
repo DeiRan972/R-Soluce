@@ -188,6 +188,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
+    simple_calendar (2.4.3)
+      rails (>= 3.0)
     simple_form (5.1.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
@@ -250,6 +252,7 @@ DEPENDENCIES
   rails (~> 6.1.5)
   sass-rails (>= 6)
   selenium-webdriver (>= 4.0.0.rc1)
+  simple_calendar (~> 2.0)
   simple_form
   spring
   sqlite3 (~> 1.4)
@@ -263,4 +266,4 @@ RUBY VERSION
    ruby 3.0.3p157
 
 BUNDLED WITH
-   2.3.10
+   2.3.5
