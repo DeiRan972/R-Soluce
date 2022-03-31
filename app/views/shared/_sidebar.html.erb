@@ -1,8 +1,6 @@
-
 <div class="sidebar-container">
   <div class="sidebar-logo">
     <p>R-soluce</p>
-
   </div>
   <ul class="sidebar-navigation">
     <li class="header">Home</li>
@@ -20,9 +18,9 @@
       <%= link_to  projects_path  do %>
          <i class="fa-solid fa-file-image"></i>  Project
         <li>
-          <%#= link_to  project_task_path(@current_user.task)  do %>
+          <%= link_to tasks_user_path do %>
             <i class="fa-solid fa-list-check"></i> Task
-          <%# end %>
+          <% end %>
          </li>
       <% end %>
     </li>
