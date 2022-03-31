@@ -9,6 +9,13 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     @project.user = current_user
     @project.save
+
+    if @project.save
+      redirect_to projects_path(@project), notice: 'Projet bien été créé'
+    else
+      render :new
+    end
+
   end
 
   def index

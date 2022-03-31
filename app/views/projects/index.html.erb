@@ -1,15 +1,33 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-12 col-lg-6">
-        <% @projects.each do |project|%>
-          <div class = card>
-            <h2><%= link_to project.name, project_path(project) %></h2>
-            <p><%= project.description %></p>
-            <p><%= project.start_date %> - <%= project.end_date %></p>
+      <div class = "text-center text-primary  mt-4">
+        <h1 >YOUR PROJECTS</h1>
+      </div>
+      <% @projects.each do |project|%>
+        <div class = "card text-center m-3 p-2 project-card">
+          <p class = "h5"><%= link_to project.name.upcase, project_path(project) %></p>
+          <div class="card-project-infos col-8 mx-auto ">
+            <div>
+              <p class = "h6 text-muted"><%= project.description %></p>
+            </div>
+            <div>
+              <p class = "text-primary "><%= project.start_date %> - <%= project.end_date %></p>
+            </div>
           </div>
 
-        <%end%>
-
+        </div>
+      <%end%>
+      <div class="container col-8 mx-auto">
+          <%= link_to  new_project_path do%></p>
+            <div class="btn btn-show col-12 mx-auto mt-2 mb-2">
+              <span> New project </span>
+            </div>
+          <% end %>
+          <div class="text-center mt-2">
+            <h1>  - <%= @projects.count %> - </h1>
+          </div>
+      </div>
     </div>
   </div>
 </div>
