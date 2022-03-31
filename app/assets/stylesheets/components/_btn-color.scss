@@ -4,6 +4,7 @@
   color: white;
   box-shadow: -2px 5px 10px #130b38;
   transition: 0.5s all ease-in-out;
+  text-decoration: none;
 }
 .btn-show a{
   color: white;
@@ -20,4 +21,25 @@
 
 .btn-show span{
   font-size: x-large;
+}
+
+.btn-show{
+  background-color: #0d3ec5;;
+  padding: 15px;
+  color: white;
+  transition: 0.5s all ease-in-out;
+  text-decoration: none;
+}
+
+.btn-show-project a{
+  color: white;
+}
+
+.btn-show-project a:hover{
+  color: #0d3ec5;
+}
+.btn-show-project:hover{
+  background-color: white;
+  border: 1px solid #130b38 ;
+  color: #130b38;
 }
