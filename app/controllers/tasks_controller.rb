@@ -1,9 +1,9 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: %i[show edit destroy update TJM]
+  before_action :set_task, only: %i[show edit destroy update]
   before_action :set_project_task, only: %i[index new create update]
 
   def index
-    @tasks = Task.where(project: @project)
+    @tasks = Task.where(project: @project).where(user: current_user)
   end
 
   def show
@@ -38,11 +38,15 @@ class TasksController < ApplicationController
   def destroy
     @task = Task.delete
   end
+  def user_tasks
+    @current_user_tasks = Task.where(user: current_user)
+  end
 
   private
 
   def set_task
-    @task = Task.find(params[:id])
+   # @task_current_user = current_user.tasks
+     @task = Task.find(params[:id])
   end
 
   def task_params
