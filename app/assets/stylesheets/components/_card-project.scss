@@ -27,4 +27,21 @@
  .task-button {
    display:flex;
    align-self: center;
+   padding-right: 5px;
  }
+
+ .avatar-user {
+   display: flex;
+   flex-direction: row;
+   height: 50px;
+   width: 50px;
+ }
+
+.img_avatar {
+  border-radius: 50%;
+  width: auto;
+}
+
+.project-title {
+  background-color: white;
+}
