@@ -5,7 +5,7 @@
   <div class="task-manager">
     <div class="task-manager">
       <div class="page-content">
-        <div class="header">Today Tasks</div>
+        <div class="header"> Status of Projects</div>
         <div class="content-categories">
           <div class="label-wrapper">
             <input class="nav-item" name="nav" type="radio" id="opt-1">
@@ -50,8 +50,13 @@
       </div>
     </div>
     <div class="container">
-      <%= week_calendar(number_of_weeks: 2) do |date| %>
-        <%= date %>
+      <%= week_calendar(number_of_weeks: 2, events: @projects, attribute: :start_date, end_attribute: :end_date) do |date, projects| %>
+          <%= date %>
+        <% projects.each do |project| %>
+          <div>
+            <%= project.name %>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>
