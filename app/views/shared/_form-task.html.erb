@@ -15,6 +15,9 @@
                   <%= f.input :description, label: false, placeholder: 'Enter the description'%>
                 </div>
                 <div class="form-outline form-white mb-4">
+                  <%= f.input :status, collection: Task::ETAT, label: false, placeholder: 'Enter the description'%>
+                </div>
+                <div class="form-outline form-white mb-4">
                   <%= f.input :estimate_time, label: false, placeholder: 'Enter your estimate_time'%>
                 </div>
                 <div class="form-outline form-white mb-4">
