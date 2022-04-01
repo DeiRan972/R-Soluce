@@ -28,21 +28,21 @@
         </div>
         <div>
           <div class ="project-tasks">
-            <ul>
-              <p><strong>Tasks</strong></p>
+            <ol>
+              <p class = "pr-2"><strong>Tasks</strong></p>
               <% @project.tasks.each_with_index do |task, index|%>
                 <li class = ""><%= task.name.capitalize %></li>
               <%end%>
-            </ul>
+            </ol>
             <div class = "task-button mr-2">
               <p class="btn-show-project btn btn-primary btn-sm"><%= link_to 'More details',  project_tasks_path(@project)%></p>
             </div>
           </div>
         </div>
         <div>
-          <ul>
+          <ul class = "avatar-user">
             <% @project.users.uniq.each do |user| %>
-              <%= user.last_name %>
+              <%= image_tag user.avatar, class: "img_avatar" %>
             <%end%>
           </ul>
         </div>

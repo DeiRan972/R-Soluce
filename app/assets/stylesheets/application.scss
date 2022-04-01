@@ -6,9 +6,9 @@
 @import "config/general_rules";
 
 // External libraries
-// @import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
 @import "font-awesome";
-@import "simple_calendar";
+//@import "simple_calendar";
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
