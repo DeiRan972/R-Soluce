@@ -19,11 +19,13 @@
         </div>
       <%end%>
       <div class="container col-8 mx-auto">
+        <% if current_user.admin %>
           <%= link_to  new_project_path do%></p>
             <div class="btn btn-show col-12 mx-auto mt-2 mb-2">
               <span> New project </span>
             </div>
           <% end %>
+        <% end %>
           <div class="text-center mt-2">
             <h1>  - <%= @projects.count %> - </h1>
           </div>

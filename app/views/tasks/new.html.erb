@@ -1,1 +1,3 @@
-<%= render 'shared/form-task' %>
+<% if current_user.admin %>
+  <%= render 'shared/form-task' %>
+<% end %>
