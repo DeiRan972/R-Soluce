@@ -34,12 +34,15 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @login_user = User.all
     @task = Task.new
   end
 
   def destroy
     @project = Project.destroy
   end
+
+  private
 
   def set_project
     @project = Project.find(params[:id])
