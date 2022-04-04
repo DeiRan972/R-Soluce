@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_01_164204) do
+ActiveRecord::Schema.define(version: 2022_04_04_162741) do
 
   create_table "daysoffs", force: :cascade do |t|
     t.date "date"
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 2022_04_01_164204) do
   create_table "tasks", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.string "status"
+    t.string "status", default: "To do"
     t.integer "project_id", null: false
     t.integer "estimate_time"
     t.integer "real_time"
