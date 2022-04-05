@@ -1,4 +1,4 @@
 class Daysoff < ApplicationRecord
   belongs_to :user
-  validates :type, presence: true
+  validates :kindof, presence: true
 end
