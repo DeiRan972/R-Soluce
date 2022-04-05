@@ -16,15 +16,15 @@
         <% if current_user.admin%>
           <div class = "flexbox project mb-2">
               <div>
-                <p class=" btn-show-project btn btn-primary btn-sm"><%= link_to "Update",
+                <p class=" btn-show-project btn btn-primary btn-sm"><%= link_to "Éditer",
                 edit_project_path(@project),
-                data: { confirm: "Are you sure?" } %></p>
+                data: { confirm: "êtes-vous sûr(e)?" } %></p>
               </div>
 
               <div>
-                <p class="btn-show-project btn btn-primary btn-sm"><%= link_to "Add tasks",
+                <p class="btn-show-project btn btn-primary btn-sm"><%= link_to "Ajouter tâches",
                 new_project_task_path(@project),
-                data: { confirm: "Are you sure?" } %></p>
+                data: { confirm: "êtes-vous sûr(e)?" } %></p>
               </div>
           </div>
         <% end %>
