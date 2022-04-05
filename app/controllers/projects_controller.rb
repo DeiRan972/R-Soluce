@@ -19,7 +19,11 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.all
+    if current_user.admin
+      @projects = Project.all
+    else
+      @projects = Project.where(user: current_user)
+    end
   end
 
   def edit

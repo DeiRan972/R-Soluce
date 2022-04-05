@@ -38,6 +38,7 @@ class TasksController < ApplicationController
   def destroy
     @task = Task.delete
   end
+
   def user_tasks
     @current_user_tasks = Task.where(user: current_user)
   end
@@ -45,8 +46,7 @@ class TasksController < ApplicationController
   private
 
   def set_task
-   # @task_current_user = current_user.tasks
-     @task = Task.find(params[:id])
+    @task = Task.find(params[:id])
   end
 
   def task_params
