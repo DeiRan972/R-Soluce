@@ -9,6 +9,7 @@
 # migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
+
 ActiveRecord::Schema.define(version: 2022_04_04_162741) do
 
   create_table "daysoffs", force: :cascade do |t|
