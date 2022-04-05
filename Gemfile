@@ -22,6 +22,9 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Flatpickr is a lightweight and powerful datetimepicker with no dependencies
+# gem 'flatpickr'
+
 # gem form / fontawesome /
 gem "autoprefixer-rails", "10.2.5"
 gem "font-awesome-sass", "~> 6.1.1"
