@@ -13,7 +13,7 @@
   height: 500px;
   position: absolute;
   font-family: 'Droid Serif', serif;
-  color:#fff;
+  color:black;
   top: 20%;
   right: 0;
   left: 0;
@@ -23,7 +23,7 @@
   box-shadow: 0px 10px 20px -9px rgba(0, 0, 0, 0.5);
   text-align: center;
   transition:all 0.4s;
-  background: #130b38 60%;
+  background: white;
   background-size: 100%;
 }
 .blog-card a{
@@ -102,7 +102,7 @@ h3:after {
   height: 2px;
   margin: 20px auto;
   border: 0;
-  background: #130b38;
+  background: black;
   transition:all 0.2s
 }
 
@@ -123,7 +123,7 @@ h3:after {
   line-height: 18px;
 }
 .intro a{
-  color: #ddd
+  color: black
 }
 .intro a:hover{
   text-decoration:underline
@@ -148,15 +148,15 @@ h3:after {
   display:block;
   width:100px;
   margin:15px auto;
-  background:#fff;
-  color:#444;
+  background:black;
+  color:white;
   padding:3px 10px;
   border-radius:2px;
   font-size:0.8em
 }
 .card-info a:hover{
-  background: #130b38;
-  color:#fff;
+  background: white;
+  color:black;
 }
 .card-info a:hover span{
    filter: brightness(10);
@@ -298,7 +298,7 @@ h3:after {
     text-shadow: none !important;
     white-space: nowrap;
     letter-spacing: 0;
-    background: #130b38;
+    background: black;
 }
 .profile-header{ background:#333 url(https://images.unsplash.com/photo-1435783099294-283725c37230?dpr=1&auto=compress,format&fit=crop&w=1376&h=635&q=80&cs=tinysrgb&crop=&bg=) top center no-repeat; background-size:cover; font-size:3em;position:relative}
 .profile-header:after{
@@ -391,7 +391,7 @@ h3:after {
 }
 .stats svg, .loves .icon-heart {
     fill: rgba(47, 47, 49, 0) !important;
-    stroke:#130b38 !important;
+    stroke:black!important;
     stroke-width:0.1em !important;
 }
 

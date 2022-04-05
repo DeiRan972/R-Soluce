@@ -9,23 +9,28 @@
         <div class ="description-card text-center">
           <p class = ""><strong>Description :</strong> <%= @project.description.capitalize %></p>
         </div>
+
         <div class ="text-center">
           <p><strong>Start date : </strong><%= @project.start_date %></p>
           <p><strong>End date : </strong><%= @project.end_date %></p>
           <p><strong>Number of days : </strong><%= @project.number_of_day %></p>
         </div>
-        <div class = "flexbox project mb-2">
-          <div>
-            <p class=" btn-show-project btn btn-primary btn-sm"><%= link_to "Update",
-            edit_project_path(@project),
-            data: { confirm: "Are you sure?" } %></p>
+
+        <% if current_user.admin%>
+          <div class = "flexbox project mb-2">
+              <div>
+                <p class=" btn-show-project btn btn-primary btn-sm"><%= link_to "Update",
+                edit_project_path(@project),
+                data: { confirm: "Are you sure?" } %></p>
+              </div>
+
+              <div>
+                <p class="btn-show-project btn btn-primary btn-sm"><%= link_to "Add tasks",
+                new_project_task_path(@project),
+                data: { confirm: "Are you sure?" } %></p>
+              </div>
           </div>
-           <div>
-            <p class="btn-show-project btn btn-primary btn-sm"><%= link_to "Add tasks",
-            new_project_task_path(@project),
-            data: { confirm: "Are you sure?" } %></p>
-          </div>
-        </div>
+        <% end %>
         <div>
           <div class ="project-tasks">
             <ol>

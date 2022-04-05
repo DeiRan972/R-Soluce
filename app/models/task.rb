@@ -1,9 +1,11 @@
 class Task < ApplicationRecord
+  ETAT = [ "In progress", "To do", "Do" ]
+
   belongs_to :project
   belongs_to :user
   validates :name, presence: true
   validates :description, presence: true
-  validates :estimate_time, presence: true, numericality: { only_integer: true }
+  validates :estimate_time, presence: true
 
   def estimate_cost
     estimate_time * tjm

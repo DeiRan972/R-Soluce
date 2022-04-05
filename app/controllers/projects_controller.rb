@@ -19,7 +19,11 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.all
+    if current_user.admin
+      @projects = Project.all
+    else
+      @projects = Project.where(user: current_user)
+    end
   end
 
   def edit
@@ -34,12 +38,15 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @login_user = User.all
     @task = Task.new
   end
 
   def destroy
     @project = Project.destroy
   end
+
+  private
 
   def set_project
     @project = Project.find(params[:id])
