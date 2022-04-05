@@ -35,7 +35,7 @@
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/Deiran972", class: "avatar dropdown-toggle card mb-4  ", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <%= current_user.first_name %>
           </div>
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item btn-show" %>
+              <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item btn-show" %>
      <% end %>
   </div>
 </div>
