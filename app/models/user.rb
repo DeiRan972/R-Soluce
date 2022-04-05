@@ -9,4 +9,5 @@ class User < ApplicationRecord
   validates :avatar, presence: true
   belongs_to :role
   has_many :tasks
+  has_many :daysoffs
 end
