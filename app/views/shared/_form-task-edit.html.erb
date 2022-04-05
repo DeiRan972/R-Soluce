@@ -5,20 +5,20 @@
           <div class="card-body p-5 text-center">
               <%= simple_form_for([@task.project, @task]) do |f| %>
                 <div class="form-outline form-white mb-4">
-                  <%= f.input :name, label: false, placeholder: 'Enter the new event'%>
+                  <%= f.input :name, label: false, placeholder: 'Nom de la tâche'%>
                 </div>
                 <div class="form-outline form-white mb-4">
-                  <%= f.input :description, label: false, placeholder: 'Enter the description'%>
+                  <%= f.input :description, label: false, placeholder: 'Déscrivez votre tâche'%>
                 </div>
                 <div class="form-outline form-white mb-4">
-                  <%= f.input :estimate_time, label: false, placeholder: 'Enter your estimate_time'%>
+                  <%= f.input :estimate_time, label: false, placeholder: 'Durée estimée'%>
                 </div>
                 <div class="form-outline form-white mb-4">
-                  <%= f.input :status, label: false, placeholder: 'Enter status'%>
+                  <%= f.input :status, label: false, placeholder: 'Status'%>
                 </div>
-                <div class="form-outline form-white mb-4">
+                <%# <div class="form-outline form-white mb-4">
                   <%= f.input :estimate_time, label: false, placeholder: 'Enter time'%>
-                </div>
+               <%#  </div> %>
                   <%= f.submit class: 'btn btn-primary mt-4' %>
               <% end %>
           </div>

@@ -4,13 +4,13 @@
       <div class =" ">
         <h3 class = "text-center h4"><%= @project.name.upcase %></h3>
         <div class ="description-card text-center">
-          <p class = ""><strong>Description :</strong> <%= @project.description.capitalize %></p>
+          <p class = ""><strong>Déscription :</strong> <%= @project.description.capitalize %></p>
         </div>
 
         <div class ="text-center">
-          <p><strong>Start date : </strong><%= @project.start_date %></p>
-          <p><strong>End date : </strong><%= @project.end_date %></p>
-          <p><strong>Number of days : </strong><%= @project.number_of_day %></p>
+          <p><strong>Date de début : </strong><%= @project.start_date %></p>
+          <p><strong>Date de fin: </strong><%= @project.end_date %></p>
+          <p><strong>Durée en jours : </strong><%= @project.number_of_day %></p>
         </div>
 
         <% if current_user.admin%>
@@ -31,13 +31,13 @@
         <div>
           <div class ="project-tasks">
             <ol>
-              <p class = "pr-2"><strong>Tasks</strong></p>
+              <p class = "pr-2"><strong>Tâches</strong></p>
               <% @project.tasks.each_with_index do |task, index|%>
                 <li class = ""><%= task.name.capitalize %></li>
               <%end%>
             </ol>
             <div class = "task-button mr-2">
-              <p class="btn-show-project btn btn-primary btn-sm"><%= link_to 'More details',  project_tasks_path(@project)%></p>
+              <p class="btn-show-project btn btn-primary btn-sm"><%= link_to 'Plus de détails',  project_tasks_path(@project)%></p>
             </div>
           </div>
         </div>
