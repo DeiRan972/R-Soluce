@@ -6,7 +6,7 @@
           <div class="card-body p-5 text-center">
 
             <div class="mb-md-5 mt-md-4 pb-5">
-             <h2 class="fw-bold mb-2 text-uppercase">Forgot your password?</h2>
+             <h2 class="fw-bold mb-2 text-uppercase">Mot de passe oublié ?</h2>
 
              <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
               <%= render "devise/shared/error_messages", resource: resource%>
@@ -17,7 +17,7 @@
               </div>
 
               <div class="actions">
-                <%= f.submit "Send me reset password instructions", class: "btn btn-outline-light btn-lg px-2" %>
+                <%= f.submit "Envoyez-moi des instructions pour réinitialiser mon mot de passe", class: "btn btn-outline-light btn-lg px-2" %>
 
               </div>
             <% end %>
