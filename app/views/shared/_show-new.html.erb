@@ -3,11 +3,11 @@
     <div class="title-content">
         <h3><%= @task.name.upcase %></h3>
         <div class="intro">
-          Description : <%= @task.description.upcase %>
+          Déscription : <%= @task.description.upcase %>
         </div>
     </div>
       <div class="card-info">
-        <p> Temps estimer : <%= @task.estimate_time %> hours </p>
+        <p> Durée estimée : <%= @task.estimate_time %> heures </p>
         <%= link_to 'update it',edit_project_task_path(@task.project,@task)  %>
       </div>
     <div class="utility-info">

@@ -3,19 +3,19 @@
     <div class="col-12 col-md-8 col-lg-6 col-xl-5">
       <div class="card bg-dark text-white" style="border-radius: 1rem;">
           <div class="card-body p-5 text-center">
-            <h1>Create a new task</h1>
+            <h1>Créer une nouvelle tâche</h1>
               <%= simple_form_for([@project, @task]) do |f| %>
                 <div class="form-outline form-white mb-4">
-                  <%= f.input :name, label: false, placeholder: 'Enter the new task name'%>
+                  <%= f.input :name, label: false, placeholder: 'Nom de la tâche'%>
                 </div>
                  <div class="form-outline form-white mb-4">
-                  <%= f.association :user, as: :select,label: 'Assign someone',label_method: :first_name, value_method: :id, include_blank: false  %>
+                  <%= f.association :user, as: :select,label: 'Assigner un équipier',label_method: :first_name, value_method: :id, include_blank: false  %>
                 </div>
                 <div class="form-outline form-white mb-4">
-                  <%= f.input :description, label: false, placeholder: 'Enter the description'%>
+                  <%= f.input :description, label: false, placeholder: 'Décrivez votre tâche'%>
                 </div>
                 <div class="form-outline form-white mb-4">
-                  <%= f.input :estimate_time, label: false, placeholder: 'Enter your estimate_time'%>
+                  <%= f.input :estimate_time, label: false, placeholder: 'Durée estimée'%>
                 </div>
                   <%= f.submit class: 'btn btn-primary mt-4' %>
               <% end %>
