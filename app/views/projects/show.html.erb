@@ -33,7 +33,7 @@
             <ol>
               <p class = "pr-2"><strong>Tâches</strong></p>
               <% @project.tasks.each_with_index do |task, index|%>
-                <li class = ""><%= task.name.capitalize %></li>
+                <li class = "">- <%= task.name.capitalize %></li>
               <%end%>
             </ol>
             <div class = "task-button mr-2">
