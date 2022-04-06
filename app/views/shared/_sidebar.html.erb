@@ -15,23 +15,23 @@
             <ul class="sidebar-navigation">
                 <li>
                   <%= link_to  root_path , class: "btn-show m-2"  do %>
-                    <i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard
+                    <i class="fa fa-tachometer" aria-hidden="true"></i> Tableau de bord
                   <% end %>
                 </li>
                 <li>
                   <%= link_to  projects_path, class: "btn-show m-2"   do %>
-                    <i class="fa-solid fa-file-image"></i>  Project
+                    <i class="fa-solid fa-file-image"></i>  Projet
                   <% end %>
                 </li>
                 <li>
                   <%= link_to tasks_user_path, class: "btn-show m-2" do %>
-                    <i class="fa-solid fa-list-check"></i> Task
+                    <i class="fa-solid fa-list-check"></i> Tâches
                   <% end %>
                 </li>
                 <% if current_user.admin %>
                   <li>
                     <%= link_to  team_path, class: "btn-show m-2" do %>
-                      <i class="fa fa-users" aria-hidden="true"></i>teams
+                      <i class="fa fa-users" aria-hidden="true"></i>Equipe
                     <% end %>
                   </li>
                 <% end %>
@@ -44,7 +44,7 @@
                     <%= image_tag "https://kitt.lewagon.com/placeholder/users/Deiran972", class: "avatar dropdown-toggle card mb-4  ", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                       <h3><%= current_user.first_name %></h3>
                   </div>
-                      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item btn-show" %>
+                      <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item btn-show" %>
             <% end %>
           </div>
         </div>
