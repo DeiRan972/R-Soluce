@@ -61,3 +61,36 @@
 .list-inline{
   align-items: center;
 }
+
+@media (max-width: 575.98px){
+  .card-product{
+    width: 400px;
+    height: auto;
+    left: -110px;
+  }
+  .card-product:hover {
+    left: 20px;
+    top: -20px;
+  }
+  .container{
+    width: 100%;
+  }
+  .card-product .card-product-infos {
+    padding: 4px;
+  }
+  .card-product h2 {
+    font-size: 18px;
+
+  }
+
+  .card-product h3 {
+    font-size: 16px;
+
+  }
+
+
+  .card-product p {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+}
