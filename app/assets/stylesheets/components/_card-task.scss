@@ -64,13 +64,12 @@
 
 @media (max-width: 575.98px){
   .card-product{
-    width: 400px;
+    width: 500px;
     height: auto;
-    left: -110px;
+    left: -90px;
   }
-  .card-product:hover {
-    left: 20px;
-    top: -20px;
+  .card-product h3{
+    display: none;
   }
   .container{
     width: 100%;
