@@ -25,6 +25,9 @@ gem 'jbuilder', '~> 2.7'
 # Flatpickr is a lightweight and powerful datetimepicker with no dependencies
 # gem 'flatpickr'
 
+# Simple_formsDatepicker
+gem 'simple-form-datepicker', '~> 0.1.3'
+
 # gem form / fontawesome /
 gem "autoprefixer-rails", "10.2.5"
 gem "font-awesome-sass", "~> 6.1.1"

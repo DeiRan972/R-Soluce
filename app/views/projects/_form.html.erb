@@ -1,9 +1,0 @@
-			<%= simple_form_for(@project) do |f| %>
-				<%= f.input :name, label: false, placeholder: 'Nom du projet' %>
-				<%= f.input :description, label: false, placeholder: 'Déscription' %>
-        <%= f.input :start_date, label: false,as: :date, placeholder: 'Date de début' %>
-        <%= f.input :end_date, label: false, as: :date, placeholder: 'Date de fin' %>
-        <%= f.input :number_of_day, label: false, placeholder: 'Nombre de jours' %>
-				<%= f.submit class: 'btn btn-primary' %>
-        <%#= f.input :user_id, label: false, placeholder: 'User' %>
-			<% end %>

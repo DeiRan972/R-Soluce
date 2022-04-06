@@ -1,0 +1,20 @@
+<div class="container py-5 h-100">
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+      <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+            <%= simple_form_for(@project) do |f| %>
+			      	<%= f.input :name, label: false, placeholder: 'Nom du projet' %>
+			      	<%= f.input :description, label: false, placeholder: 'Déscription' %>
+              <%= f.input :start_date, label: false, as: :date, placeholder: 'Date de début' %>
+              <%= f.input :end_date, label: false, as: :date, placeholder: 'Date de fin' %>
+              <%= f.input :number_of_day, label: false, placeholder: 'Nombre de jours' %>
+			      	<%= f.submit class: 'btn btn-primary mt-2' %>
+              <%#= f.input :user_id, label: false, placeholder: 'User' %>
+			      <% end %>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

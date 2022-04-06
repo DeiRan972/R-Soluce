@@ -31,9 +31,9 @@
         <div>
           <div class ="project-tasks">
             <ol>
-              <p class = "pr-2"><strong>Tâches</strong></p>
-              <% @project.tasks.each_with_index do |task, index|%>
-                <li class = ""><%= task.name.capitalize %></li>
+              <p class = "pr-1"><strong>Tâches</strong></p>
+              <% @project.tasks.each do |task|%>
+                <li class = "">- <%= task.name.capitalize %></li>
               <%end%>
             </ol>
             <div class = "task-button mr-2">
@@ -41,7 +41,7 @@
             </div>
           </div>
         </div>
-        <div>
+        <div class = "p-2">
           <ul class = "avatar-user">
             <% @project.users.uniq.each do |user| %>
               <%= image_tag user.avatar, class: "img_avatar" %>
