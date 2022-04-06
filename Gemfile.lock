@@ -95,7 +95,6 @@ GEM
     erubi (1.10.0)
     execjs (2.7.0)
     ffi (1.15.5)
-    flatpickr (4.6.11.0)
     font-awesome-sass (6.1.1)
       sassc (~> 2.0)
     globalid (1.0.0)
@@ -229,6 +228,9 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    wicked_pdf (2.1.0)
+      activesupport
+    wkhtmltopdf-binary (0.12.6.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.5.4)
@@ -245,7 +247,6 @@ DEPENDENCIES
   capybara (>= 3.26)
   devise
   dotenv-rails
-  flatpickr
   font-awesome-sass (~> 6.1.1)
   jbuilder (~> 2.7)
   listen (~> 3.3)
@@ -263,6 +264,8 @@ DEPENDENCIES
   web-console (>= 4.1.0)
   webdrivers
   webpacker (~> 5.0)
+  wicked_pdf
+  wkhtmltopdf-binary
 
 RUBY VERSION
    ruby 3.0.3p157
