@@ -1,41 +1,67 @@
-<div class="sidebar-container">
-  <div class="sidebar-logo">
-    <%= link_to root_path,  class: "navbar-brand" do %>
-      <%= image_tag "https://www.r-itconsulting.fr/images/structures/logo.png" %>
-    <% end %>
+  <div class="burger">
+  <span></span>
   </div>
-  <ul class="sidebar-navigation">
-    <li class="header">Accueil</li>
-        <li>
-          <%= link_to  root_path  do %>
-            <i class="fa fa-tachometer" aria-hidden="true"></i> Tableau de bord
-          <% end %>
-        </li>
-        <li>
-          <%= link_to  projects_path  do %>
-            <i class="fa-solid fa-file-image"></i>  Projet
-          <% end %>
-        <li>
-        <li>
-          <%= link_to tasks_user_path do %>
-            <i class="fa-solid fa-list-check"></i> Tâche
-          <% end %>
-        </li>
-    <li class="header">Autre action</li>
-    <li>
-      <%= link_to  team_path do %>
-        <i class="fa fa-users" aria-hidden="true"></i>Équipe
-      <% end %>
-    </li>
-  </ul>
-    <div class="mt-4">
-    <% if user_signed_in? %>
-          <li class="nav-item dropdown">
-          <div class="avatar-team mx-auto">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/Deiran972", class: "avatar dropdown-toggle card mb-4  ", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <%= current_user.first_name %>
+ <div class="sidenav bg-menu menu">
+    <div id="BlockMenu">
+      <div class="container-fluid">
+        <div class="row ">
+          <div class="col-md-12 mg-top-10 ">
+          <div class="sidebar-container ">
+            <div class="sidebar-logo">
+              <%= link_to root_path,  class: "navbar-brand" do %>
+                <%= image_tag "https://www.r-itconsulting.fr/images/structures/logo.png" %>
+              <% end %>
+            </div>
+            <ul class="sidebar-navigation">
+                <li>
+                  <%= link_to  root_path , class: "btn-show m-2"  do %>
+                    <i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to  projects_path, class: "btn-show m-2"   do %>
+                    <i class="fa-solid fa-file-image"></i>  Project
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to tasks_user_path, class: "btn-show m-2" do %>
+                    <i class="fa-solid fa-list-check"></i> Task
+                  <% end %>
+                </li>
+                <% if current_user.admin %>
+                  <li>
+                    <%= link_to  team_path, class: "btn-show m-2" do %>
+                      <i class="fa fa-users" aria-hidden="true"></i>teams
+                    <% end %>
+                  </li>
+                <% end %>
+            </ul>
           </div>
-              <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item btn-show" %>
-     <% end %>
+          <div class="mt-4">
+            <% if user_signed_in? %>
+                  <li class="nav-item dropdown">
+                  <div class="avatar-team mx-auto">
+                    <%= image_tag "https://kitt.lewagon.com/placeholder/users/Deiran972", class: "avatar dropdown-toggle card mb-4  ", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                      <h3><%= current_user.first_name %></h3>
+                  </div>
+                      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item btn-show" %>
+            <% end %>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+        <div class="BlockMenuItem">
+        </div>
+    </div>
   </div>
-</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" language=“javascript”>
+  $(document).ready(function() {$('.burger').click(function() {$(this).toggleClass('burger-open');
+  $('.menu').toggleClass('is-open');return false; });
+  $('.menu ul li a').click(function(event){$('.menu').toggleClass('is-open');
+  $('.burger').toggleClass('burger-open');event.stopPropagation(); }); });
+</script>
