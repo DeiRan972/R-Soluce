@@ -27,13 +27,14 @@
 
                 <% if devise_mapping.rememberable? %>
                   <div class="field mb-4", >
-                    <%= f.input :remember_me, as: :boolean %>
+                    <%= f.input :remember_me, label:"Se Souvenir", as: :boolean %>
                   </div>
                 <% end %>
 
                   <div class="actions">
                     <button class="btn btn-outline-light btn-lg px-5" type="submit">Connexion</button>
                   </div>
+                   <%= link_to 'crée un nouvelle utilisateur', new_user_registration_path %>
               <% end %>
               <%= render "devise/shared/links" %>
             </div>
