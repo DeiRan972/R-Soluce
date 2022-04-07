@@ -3,7 +3,11 @@ class TasksController < ApplicationController
   before_action :set_project_task, only: %i[index new create update]
 
   def index
-    @tasks = Task.where(project: @project).where(user: current_user)
+    if current_user.admin
+      @tasks = Task.all
+    else
+      @tasks = Task.where(project: @project).where(user: current_user)
+    end
   end
 
   def show
@@ -16,7 +20,6 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     @task.project = @project
-    @task.status = false
     if @task.save
       redirect_to project_tasks_path(@project), notice: 'new task create'
     else
@@ -29,7 +32,7 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      redirect_to project_task_path([@task.project, @task])
+      redirect_to project_tasks_path([@task.project, @task])
     else
       render :edit
     end
@@ -40,7 +43,11 @@ class TasksController < ApplicationController
   end
 
   def user_tasks
-    @current_user_tasks = Task.where(user: current_user)
+    if current_user.admin
+      @current_user_tasks = Task.all
+    else
+      @current_user_tasks = Task.where(user: current_user)
+    end
   end
 
   private
