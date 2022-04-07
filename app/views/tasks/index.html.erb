@@ -1,19 +1,23 @@
 <div class="container col-12 mx-auto col-sm-12">
     <% @tasks.each do |task| %>
       <%= link_to  [task.project, task] do %>
-           <div class="card-user-task m-4 ">
+        <div class="card-user-task m-4" data-controller="add-comment">
           <div class="face text-center">
             <h3><%= task.project.name.upcase %></h3>
           </div>
-          <div class="infos m-4 text-center">
-            <h1><%= task.name.upcase %></h1>
-            <p >Tâche : <strong><%= task.description %></strong></p>
-            <p> Etat : <%= task.status %></p>
-            <p> Temps estimer : <%= task.estimate_time %> - heures</p>
-          </div>
+            <div class="infos m-4 text-center">
+              <h1><%= task.name.upcase %></h1>
+              <p >Tâche : <strong><%= task.description %></strong></p>
+              <p> Etat : <%= task.status %></p>
+              <p> Temps estimer : <%= task.estimate_time %> - heures</p>
+              <% end %>
+              <i class="fa-solid fa-pen-to-square"  data-action="click->add-comment#displayComment"></i>
+            </div>
+            <div class="comment d-none" data-add-comment-target="form">
+            <p>comment</p>
+            </div>
         </div>
       <% end %>
-    <% end %>
      <div class="text-center">
         <h1>  - <%= @tasks.count %> - </h1>
       </div>
