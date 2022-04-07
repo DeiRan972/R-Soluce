@@ -1,5 +1,5 @@
 class Task < ApplicationRecord
-  ETAT = [ "In progress", "To do", "Done" ]
+  ETAT = [ "En cours", "Fait" ]
 
   belongs_to :project
   belongs_to :user

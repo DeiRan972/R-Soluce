@@ -14,7 +14,7 @@
                   <%= f.input :estimate_time, label: false, placeholder: 'Temp estimé'%>
                 </div>
                 <div class="form-outline form-white mb-4">
-                  <%= f.input :status, label: false, placeholder: 'Status'%>
+                  <%= f.input :status, label: false, placeholder: 'Status', collection: Task::ETAT%>
                 </div>
                 <%# <div class="form-outline form-white mb-4">
                   <%= f.input :estimate_time, label: false, placeholder: 'Enter time'%>
