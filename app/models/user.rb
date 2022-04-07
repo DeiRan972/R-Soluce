@@ -6,7 +6,6 @@ class User < ApplicationRecord
 
   validates :first_name, presence: true, uniqueness: true
   validates :last_name, presence: true, uniqueness: true
-  validates :avatar, presence: true
   belongs_to :role
   has_many :tasks
   has_many :daysoffs
