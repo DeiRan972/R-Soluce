@@ -27,7 +27,7 @@
   </div>
 
  <div class="field">
-    <%= f.association :role %> <br />
+    <%= f.association :role, label_method: :level, value_method: :id, include_blank: false  %> <br />
   </div>
 
 

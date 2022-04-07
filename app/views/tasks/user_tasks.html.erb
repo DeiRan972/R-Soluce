@@ -1,16 +1,21 @@
-<div class="container col-8">
-  <% @current_user_tasks.each do |user_task| %>
-      <div class="card-user-task m-4 ">
-          <div class="face text-center">
-            <h3><%= user_task.project.name.upcase %></h3>
+
+<div class="main">
+  <div class="container-fluid">
+    <% @current_user_tasks.each do |user_task| %>
+      <%= link_to  [user_task.project, user_task] do %>
+        <div class="card-user-task m-4 ">
+            <div class="face text-center">
+              <h3><%= user_task.project.name.upcase %></h3>
+            </div>
+            <div class="infos m-4 text-center">
+              <h1><%= user_task.name.upcase %></h1>
+              <p >Tâche : <strong><%= user_task.description %></strong></p>
+              <p> Etat : <%= user_task.status %></p>
+              <p> Temps estimer : <%= user_task.estimate_time %> - heures</p>
+              <p> temps-Réel : <%= user_task.real_time %> - heures</p>
+            </div>
           </div>
-          <div class="infos m-4 text-center">
-            <h1><%= user_task.name.upcase %></h1>
-            <p >Tâche : <strong><%= user_task.description %></strong></p>
-            <p> Etat : <%= user_task.status %></p>
-            <p> Temps estimer : <%= user_task.estimate_time %> - heures</p>
-            <p> temps-Réel : <%= user_task.real_time %> - heures</p>
-          </div>
-        </div>
-  <% end %>
+      <% end %>
+    <% end %>
+  </div>
 </div>
