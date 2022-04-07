@@ -46,7 +46,6 @@
                   </div>
                       <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item btn-show text-center h6" %>
                       <% if current_user.admin %>
-                         <%= link_to 'crée un nouvelle utilisateur', new_user_registration_path %>
                       <% end %>
             <% end %>
           </div>
