@@ -1,3 +1,4 @@
+
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-10">
@@ -13,21 +14,13 @@
               <p><strong>End date : </strong><%= project.end_date.strftime('%d-%m-%Y') %></p>
             </div>
           </div>
-
+  <%end%>
+  <div class="container col-8 mx-auto">
+    <% if current_user.admin %>
+      <%= link_to  new_project_path do%></p>
+        <div class="btn btn-show col-12 mx-auto mt-2 mb-2">
+          <span> Nouveau projet </span>
         </div>
-      <%end%>
-      <div class="container col-8 mx-auto">
-        <% if current_user.admin %>
-          <%= link_to  new_project_path do%></p>
-            <div class="btn btn-show col-12 mx-auto mt-2 mb-2">
-              <span> Nouveau projet </span>
-            </div>
-          <% end %>
-        <% end %>
-          <div class="text-center mt-2">
-            <h1>  - <%= @projects.count %> - </h1>
-          </div>
-      </div>
-    </div>
-  </div>
-</div>
+      <% end %>
+    <% end %>
+   </div>
