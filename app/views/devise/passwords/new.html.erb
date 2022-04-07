@@ -12,16 +12,14 @@
               <%= render "devise/shared/error_messages", resource: resource%>
 
               <div class="field mb-4">
-                <%= f.label :email %><br />
-                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form-control-lg"%>
+                <%= f.label :email %>
+                <%= f.email_field :email, required: true, autofocus: true, autocomplete: "email", class: "form-control form-control-lg"%>
               </div>
 
               <div class="actions">
-                <%= f.submit "Envoyez-moi des instructions pour réinitialiser mon mot de passe", class: "btn btn-outline-light btn-lg px-2" %>
-
+                <%= f.button :submit ,placeholder: "Envoyez-moi des instructions", class: "btn btn-outline-light  px-2" %>
               </div>
             <% end %>
-
           </div>
         </div>
       </div>

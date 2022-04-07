@@ -10,6 +10,7 @@ class Task < ApplicationRecord
   def estimate_cost
     estimate_time * tjm
   end
+
   def real_cost
     real_time * tjm
   end
