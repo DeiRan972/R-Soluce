@@ -8,7 +8,7 @@
     </div>
       <div class="card-info">
         <p> Temps estimé : <%= @task.estimate_time %> heures </p>
-          <%= link_to 'update it',edit_project_task_path(@task.project,@task)  %>
+          <%= link_to 'Evolution',edit_project_task_path(@task.project,@task)  %>
       </div>
     <div class="utility-info">
       <ul class="utility-list">
@@ -22,3 +22,5 @@
     <div class="gradient-overlay"></div>
     <div class="color-overlay"></div>
 </div>
+
+ <%= link_to 'retour a la liste', tasks_user_path , class: "btn-show"%>

@@ -9,20 +9,16 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     @project.user = current_user
     @project.save
-
     if @project.save
-      redirect_to projects_path(@project), notice: 'Projet bien été créé'
+      redirect_to projects_path(@project), notice: 'Projet à bien été créé'
     else
       render :new
     end
-
   end
 
   def index
     if current_user.admin
       @projects = Project.all
-    else
-      @projects = Project.where(user: current_user)
     end
   end
 
@@ -31,7 +27,7 @@ class ProjectsController < ApplicationController
 
   def update
     if @project.update(project_params)
-      redirect_to project_path(@project), notice: 'Projet bien mis à jour'
+      redirect_to project_path(@project), notice: 'Projet à bien mis à jour'
     else
       render :edit
     end

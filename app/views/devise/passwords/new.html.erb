@@ -16,9 +16,9 @@
                 <%= f.email_field :email, required: true, autofocus: true, autocomplete: "email", class: "form-control form-control-lg"%>
               </div>
 
-              <div class="actions">
-                <%= f.button :submit ,placeholder: "Envoyez-moi des instructions", class: "btn btn-outline-light  px-2" %>
-              </div>
+                <div class="actions">
+                  <%= f.submit "Envoyez-moi des instructions", class: "btn btn-outline-light  px-2", required: true %>
+                </div>
             <% end %>
           </div>
         </div>

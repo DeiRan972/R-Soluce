@@ -8,3 +8,9 @@
   padding: 5px;
   width: 100%;
 }
+
+@media(max-width: 390px) {
+  .main{
+    margin-left: 0;
+  }
+}

@@ -18,11 +18,13 @@
                     <i class="fa fa-tachometer" aria-hidden="true"></i>Tableau de bord
                   <% end %>
                 </li>
+                 <% if current_user.admin %>
                 <li>
                   <%= link_to  projects_path, class: "btn-show m-2"   do %>
                     <i class="fa-solid fa-file-image"></i> Projet
                   <% end %>
                 </li>
+                <% end %>
                 <li>
                   <%= link_to tasks_user_path, class: "btn-show m-2" do %>
                     <i class="fa-solid fa-list-check"></i> Tâches
