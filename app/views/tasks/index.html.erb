@@ -1,6 +1,7 @@
 <div class="main">
   <div class="container-fluid">
-    <div class="container col-12 mx-auto col-sm-12">
+    <div class="row justify-content-center">
+      <div class="col-10">
         <% @tasks.each do |task| %>
           <%= link_to  [task.project, task] do %>
             <div class="card-user-task m-4" data-controller="add-comment">
@@ -13,16 +14,17 @@
                   <p> Etat : <%= task.status %></p>
                   <p> Temps estimé : <%= task.estimate_time %> - heures</p>
                   <% end %>
-                  <i class="fa-solid fa-pen-to-square"  data-action="click->add-comment#displayComment"></i>
+                  <i class="fa-solid fa-pen-to-square"  data-action="click->add-comment#displayComment"></i> - Ajouter un commentaire
                 </div>
-                <div class="comment d-none" data-add-comment-target="form">
+                <div class="container chatroom d-none" data-add-comment-target="form">
                 <p>Commentaires</p>
                 </div>
             </div>
           <% end %>
-        <div class="text-center">
+          <div class="text-center">
             <h1>  - <%= @tasks.count %> - </h1>
           </div>
+      </div>
     </div>
   </div>
 </div>
