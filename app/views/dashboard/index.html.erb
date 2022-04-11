@@ -1,44 +1,28 @@
 
 <!------ Include the above in your HEAD tag ---------->
 <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap" rel="stylesheet">
+<div class="main">
   <div class="container col-12 mx-auto">
     <div class="task-manager">
       <div class="task-manager">
         <div class="page-content">
           <div class="header"> État d'avancement des Projets</div>
-          <div class="content-categories">
-            <div class="label-wrapper">
-              <input class="nav-item" name="nav" type="radio" id="opt-1">
-              <label class="category" for="opt-1">Tous</label>
+            <div class="container col-12 mx-auto">
+            <div class="tasks-manager">
+              <% @current_user_tasks.each do |task_user| %>
+                <div class="task">
+                  <input class="task-item" name="task" type="checkbox" id="item-1" checked>
+                    <label for="item-1">
+                    <span class="label-text"> <%= task_user.project.name %> - <%= task_user.description %></span>
+                  </label>
+                  <span class="tag approved"><%= task_user.status  %></span>
+                </div>
+              <% end %>
             </div>
-            <div class="label-wrapper">
-              <input class="nav-item" name="nav" type="radio" id="opt-2" checked>
-              <label class="category" for="opt-2">Important</label>
-            </div>
-            <div class="label-wrapper">
-              <input class="nav-item" name="nav" type="radio" id="opt-3">
-              <label class="category" for="opt-3">Commentaires</label>
-            </div>
-            <div class="label-wrapper">
-              <input class="nav-item" name="nav" type="radio" id="opt-4">
-              <label class="category" for="opt-4">Liens</label>
-            </div>
-          </div>
-          <div class="tasks-wrapper">
-            <% @current_user_tasks.each do |task_user| %>
-              <div class="task">
-                <input class="task-item" name="task" type="checkbox" id="item-1" checked>
-                  <label for="item-1">
-                  <span class="label-text"> <%= task_user.project.name %> - <%= task_user.description %></span>
-                </label>
-                <span class="tag approved"><%= task_user.status  %></span>
-              </div>
-            <% end %>
-          </div>
         </div>
       </div>
       <div class="container">
-        <%= week_calendar(number_of_weeks: 2, events: @projects, attribute: :start_date, end_attribute: :end_date) do |date, projects| %>
+        <%= week_calendar(number_of_weeks: 3, events: @projects, attribute: :start_date, end_attribute: :end_date) do |date, projects| %>
             <%= date %>
           <% projects.each do |project| %>
             <div>
@@ -49,3 +33,4 @@
       </div>
     </div>
   </div>
+</div>
