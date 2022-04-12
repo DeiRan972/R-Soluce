@@ -44,7 +44,10 @@
         <div>
           <ul class = "avatar-user p-2">
             <% @project.users.uniq.each do |user| %>
-              <%= image_tag user.avatar, class: "img_avatar" %>
+              <div class="d-flex m-2">
+                <%= image_tag user.avatar, class: "img_avatar" %>
+                <p><%= user.first_name %></p>
+              </div>
             <%end%>
           </ul>
         </div>
