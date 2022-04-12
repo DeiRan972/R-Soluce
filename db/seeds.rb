@@ -18,7 +18,7 @@ User.destroy_all
 p 'users destroyed'
 
 p 'creating roles'
-role1 = Role.create!(level: 'junior')
+role1 = Role.create!(level: 'JUNIOR')
 
 
 p 'creating users'
