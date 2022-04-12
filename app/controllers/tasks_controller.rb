@@ -4,7 +4,8 @@ class TasksController < ApplicationController
 
   def index
     if current_user.admin
-      @tasks = Task.all
+      @tasks_projects = Task.all
+      @tasks = @tasks_projects.where(project: @project).all
     else
       @tasks = Task.where(project: @project).where(user: current_user)
     end
