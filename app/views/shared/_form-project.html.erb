@@ -16,11 +16,8 @@
           <div class="form-outline form-white mb-4">
             <%= f.input :end_date, label: false, as: :date, placeholder: 'Date de fin' %>
           </div>
-          <div class="form-outline form-white mb-4">
-            <%= f.input :number_of_day, label: false, placeholder: 'Nombre de jours' %>
-          </div>
-			    	<%= f.submit "Créer un projet", class: 'btn btn-primary' %>
-            <%#= f.input :user_id, label: false, placeholder: 'User' %>
+			    	<%= f.submit class: 'btn btn-primary' %>
+          <%= link_to 'Annuler',  projects_path, class: 'btn btn-primary' %>
 			    <% end %>
          </div>
         </div>

@@ -11,4 +11,5 @@ class User < ApplicationRecord
   belongs_to :role
   has_many :tasks
   has_many :daysoffs
+  has_many :commentaires
 end
