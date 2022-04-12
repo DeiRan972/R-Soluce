@@ -4,13 +4,13 @@
     <div class="row justify-content-center">
       <div class="col-10">
        <div class="text-center">
-            <h1>  Liste de  Roles  </h1>
+            <h1>  LISTE DES RÔLES  </h1>
         </div>
             <% @roles.each do |role| %>
           <div class="card-user-task m-4  text-center">
             <div class="d-flex justify-content-center">
               <h2 class="ml-4"><%= role.level %></h2>
-              <%= link_to 'X',  role_path(role),method: :delete, data: {confirm: 'ête vous sûre'}, class: " btn" %>
+              <%= link_to 'X',  role_path(role),method: :delete, data: {confirm: 'êtes vous sûre'}, class: " btn" %>
             </div>
           </div>
             <% end %>
@@ -18,7 +18,7 @@
           <% if current_user.admin %>
             <%= link_to  new_role_path do%></p>
               <div class="btn btn-show col-12 mx-auto mt-2 mb-2">
-                <span> Créer un nouveau rôle </span>
+                <span> Ajoutez </span>
               </div>
             <% end %>
           <% end %>

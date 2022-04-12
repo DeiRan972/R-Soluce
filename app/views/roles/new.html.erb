@@ -3,12 +3,12 @@
     <div class="col-12 col-md-8 col-lg-6 col-xl-5">
       <div class="card bg-dark text-white" style="border-radius: 1rem;">
           <div class="card-body p-5 text-center">
-            <h1>Créer une nouvelle tâche</h1>
+            <h1>Créer un role</h1>
               <%= simple_form_for([@role]) do |f| %>
                 <div class="form-outline form-white mb-4">
                   <%= f.input :level, label: false, placeholder: 'Nom du role'%>
                 </div>
-                  <%= f.submit "Créer un role", class: 'btn btn-primary mt-4' %>
+                  <%= f.submit "AJOUTEZ", class: 'btn btn-primary mt-4' %>
               <% end %>
           </div>
         </div>
