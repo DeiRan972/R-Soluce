@@ -5,8 +5,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'dashboard#index'
   resources :projects do
-    resources :tasks do
-      resources :commentaires, only: %i[create new]
-    end
+    resources :tasks
   end
+  resources :roles, only: %i[index create new destroy]
 end
