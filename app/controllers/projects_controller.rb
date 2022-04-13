@@ -17,16 +17,7 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    if current_user.admin
-      @projects = Project.all
-    end
-
-    respond_to do |format|
-      format.html
-      format.pdf do
-        render pdf: "Projects: #{@projects.count}", template: 'projects/projects.html.erb', layout: 'pdf'   # Excluding ".pdf" extension.
-      end
-    end
+     @projects = Project.all
   end
 
   def edit
