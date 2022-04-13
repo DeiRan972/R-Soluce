@@ -1,16 +1,16 @@
 <div class=main>
-  <div class="container col-8 mx-auto p-4">
+  <div class="container col-12 mx-auto p-4">
       <div class="text-center">
         <h1>NOTRE EQUIPE</h1>
         <h2> - <%= @users.count %> personnes - </h2>
       </div>
-    <div class="row d-flex">
+    <div class="row">
       <% @users.each do |user| %>
-        <div class="card-team text-center m-4" style="width :35%">
+        <div class="card-team col-2 text-center m-2" style="width :35%">
           <%= image_tag "#{user.avatar}", class: "avatar-team border-radius :50%", alt: "avatar " %>
-          <div class="card-body">
+          <div class="card-body p-4">
             <h3><%= user.first_name %> <%= user.last_name %></h3>
-            <p> Status - <%= user.role.level %></p>
+            <p><%= user.role.level %></p>
           </div>
         </div>
       <% end %>
