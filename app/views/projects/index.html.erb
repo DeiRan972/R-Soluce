@@ -26,20 +26,23 @@
           </div>
         <%end%>
 
-        <div class="container col-8 mx-auto">
-          <% if current_user.admin %>
-            <%= link_to  new_project_path do%>
-              <div class="btn btn-show col-12 mx-auto mt-2 mb-2">
-                <span> Nouveau projet </span>
-              </div>
+        <div class="pdf-btn-container col-12 mx-auto">
+          <div class="col-3 p-2">
+            <% if current_user.admin %>
+              <%= link_to  new_project_path do%>
+                <div class="btn btn-show col-12 mx-auto mt-2 mb-2">
+                  <span> Nouveau projet </span>
+                </div>
+              <% end %>
             <% end %>
-
+          </div>
+          <div class="col-3 p-2">
             <%= link_to projects_path(format: :pdf) do%>
               <div class="btn btn-show col-12 mx-auto mt-2 mb-2">
-                <span> PDF Projets </span>
+                <span> PDF</span>
               </div>
             <% end %>
-          <% end %>
+          </div>
         </div>
       </div>
     </div>
