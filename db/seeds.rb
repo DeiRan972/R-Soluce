@@ -18,23 +18,52 @@ User.destroy_all
 p 'users destroyed'
 
 p 'creating roles'
-role1 = Role.create!(level: 'JUNIOR')
-
+role1 = Role.create!(level: 'SENIOR')
 
 p 'creating users'
-user1 = User.create!(last_name: 'Manon', first_name: 'KENZO', enable: 'false', admin: 'true', email: 'manon@exemple.com', password: '12345man', role: role1 , avatar: "https://kitt.lewagon.com/placeholder/users/cveneziani")
+user1 = User.create!(last_name: 'Donatella', first_name: 'VERSACE', enable: 'false', admin: 'true', email: 'donatella@exemple.com', password:'12345don', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/cveneziani")
 p user1.last_name
-user2 = User.create!(last_name: 'Pierre', first_name: 'CARDIN', enable: 'false', admin: 'false', email: 'pierre@exemple.com', password:'12345pie', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/ssaunier")
+user2 = User.create!(last_name: 'Takada', first_name: 'KENZO', enable: 'false', admin: 'false', email: 'manon@exemple.com', password: '12345man', role: role1 , avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
 p user2.last_name
-user3 = User.create!(last_name: 'Olivier', first_name: 'ROUSTIN', enable: 'false', admin: 'false', email: 'olivier@exemple.com', password:'12345oli', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+user3 = User.create!(last_name: 'Pierre', first_name: 'CARDIN', enable: 'false', admin: 'false', email: 'pierre@exemple.com', password:'12345pie', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/ssaunier")
 p user3.last_name
+user4 = User.create!(last_name: 'Olivier', first_name: 'ROUSTIN', enable: 'false', admin: 'false', email: 'olivier@exemple.com', password:'12345oli', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+p user4.last_name
+user5 = User.create!(last_name: 'Oscar', first_name: 'DE LA RENTA', enable: 'false', admin: 'false', email: 'oscar@exemple.com', password:'12345osc', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+p user5.last_name
+user6 = User.create!(last_name: 'Elie', first_name: 'SAAB', enable: 'false', admin: 'false', email: 'elie@exemple.com', password:'12345eli', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+p user6.last_name
+user7 = User.create!(last_name: 'Coco', first_name: 'CHANNEL', enable: 'false', admin: 'false', email: 'coco@exemple.com', password:'12345coc', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+p user7.last_name
+user8 = User.create!(last_name: 'Chantal', first_name: 'THOMAS', enable: 'false', admin: 'false', email: 'chantal@exemple.com', password:'12345cha', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+p user8.last_name
+user9 = User.create!(last_name: 'Stella', first_name: 'McCARTNEY', enable: 'false', admin: 'false', email: 'stella@exemple.com', password:'12345ste', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+p user9.last_name
+user10 = User.create!(last_name: 'John', first_name: 'GALLIANO', enable: 'false', admin: 'false', email: 'john@exemple.com', password:'12345joh', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+p user10.last_name
+user11 = User.create!(last_name: 'Ninna', first_name: 'RICCI', enable: 'false', admin: 'false', email: 'nina@exemple.com', password:'12345nin', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+p user11.last_name
+user12 = User.create!(last_name: 'Azedine', first_name: 'ALAIA', enable: 'false', admin: 'false', email: 'azedine@exemple.com', password:'12345aze', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+p user12.last_name
 
 p 'creating projects'
-projet1 = Project.create!(user: user1, name: 'Une application de journal personnel', description: 'écrire ses mémoires', start_date: '21/03/2022', end_date: '15/04/2022')
-projet2 = Project.create!(user: user1, name: 'Un tracker de dépenses', description: 'tenir son budget', start_date: '24/03/2022', end_date: '14/03/2022')
+projet1 = Project.create!(user: user1, name: 'MAP TOITURE', description: 'Travaux isolation ', start_date: '14/04/2022', end_date: '15/05/2022')
+projet2 = Project.create!(user: user1, name: 'TARGET TRAJET', description: 'Trouver son chemin', start_date: '14/04/2022', end_date: '14/05/2022')
+projet3 = Project.create!(user: user1, name: 'SEMANTIQUE', description: 'Etude du language', start_date: '24/03/2022', end_date: '13/04/2022')
+projet4 = Project.create!(user: user1, name: 'TRACKER BUDGET', description: 'tenir son budget', start_date: '24/03/2022', end_date: '12/04/2022')
+projet5 = Project.create!(user: user1, name: 'PLANNIFICATION', description: 'Gerer son temps', start_date: '24/03/2022', end_date: '11/04/2022')
+projet6 = Project.create!(user: user1, name: 'PROCESS INDUSTRIE', description: 'Conception de tâche', start_date: '24/03/2022', end_date: '11/04/2022')
 
 p 'creating tasks'
-Task.create!(user: user2, project: projet1, name: 'creation DB', description: 'diverses tables', status: 'In Review', estimate_time: '2', real_time:'5', tjm: '150')
-Task.create!(user: user3, project: projet1, name: 'controleurs', description: 'maj', status: 'In Review', estimate_time: '1', real_time:'5', tjm: '150')
-Task.create!(user: user3, project: projet2, name: 'login pages', description: 'creation', status: 'In progress', estimate_time: '1', real_time:'5', tjm: '150')
-Task.create!(user: user2, project: projet2, name: 'home page', description: 'css', status: 'In progress', estimate_time: '2', real_time:'5', tjm: '150')
+Task.create!(user: user2, project: projet1, name: 'Users stories', description: 'creation du chemin', status: 'In Review', estimate_time: '5', real_time:'6', tjm: '150')
+Task.create!(user: user3, project: projet1, name: 'Zoning', description: 'scinder les blocs', status: 'In Review', estimate_time: '1', real_time:'3', tjm: '150')
+Task.create!(user: user4, project: projet2, name: 'Maquette', description: 'creation', status: 'In progress', estimate_time: '1', real_time:'1', tjm: '150')
+Task.create!(user: user5, project: projet2, name: 'Cahier des charges', description: 'recenser les besoins', status: 'In progress', estimate_time: '3', real_time:'2', tjm: '150')
+Task.create!(user: user6, project: projet3, name: 'Login page', description: 'pouvoir se connecter', status: 'In progress', estimate_time: '2', real_time:'1', tjm: '150')
+Task.create!(user: user7, project: projet3, name: 'Home page', description: 'présentation de la page', status: 'In progress', estimate_time: '2', real_time:'2', tjm: '150')
+Task.create!(user: user8, project: projet4, name: 'Création seed', description: 'enrichir la base', status: 'In progress', estimate_time: '3', real_time:'3', tjm: '150')
+Task.create!(user: user9, project: projet4, name: 'Users stories', description: 'creation des formulaires', status: 'In progress', estimate_time: '5', real_time:'5', tjm: '150')
+Task.create!(user: user10, project: projet5, name: 'Zoning', description: 'confirmer les blocs', status: 'In progress', estimate_time: '2', real_time:'3', tjm: '150')
+Task.create!(user: user11, project: projet5, name: 'Graphisme', description: 'enrigir le css', status: 'In progress', estimate_time: '2', real_time:'5', tjm: '150')
+Task.create!(user: user12, project: projet6, name: 'Login out ', description: 'pour se deconnecter', status: 'In progress', estimate_time: '2', real_time:'2', tjm: '150')
+Task.create!(user: user12, project: projet6, name: 'formulaire', description: 'inscrition', status: 'In progress', estimate_time: '2', real_time:'2', tjm: '150')
