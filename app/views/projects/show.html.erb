@@ -1,4 +1,4 @@
-<div class="container m-5" >
+<div class="container col-12 col-lg-12" >
   <div class="row justify-content-center">
     <div class="col-12 col-lg-6 project-container">
       <div class =" ">
@@ -16,8 +16,8 @@
         <% if current_user.admin%>
           <div class = "flexbox project mb-2">
               <div>
-                <p class=" btn-show-project btn btn-primary btn-sm"><%= link_to "Éditer",
-                edit_project_path(@project),
+                <p class=" btn-show-project btn btn-primary btn-sm">
+                <%= link_to "Éditer", edit_project_path(@project),
                 data: { confirm: "êtes-vous sûr(e)?" } %></p>
               </div>
 

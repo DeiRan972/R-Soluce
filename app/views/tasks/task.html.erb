@@ -1,0 +1,20 @@
+
+<p>
+<strong>Date de génération du PDF :</strong>
+<%=  Time.now %>
+</p>
+
+<table>
+  <tr>
+    <th><strong>Tâche ID</strong></th>
+    <th><strong>Nom de la tâche</strong></th>
+    <th><strong>Déscription</strong></th>
+    <th><strong>Status</strong></th>
+  </tr>
+
+  <tr>
+    <td><%= @project.task.id %></td>
+    <td><%= @task.name %></td>
+    <td><%= simple_format(@task.description) %></td>
+  </tr>
+</table>

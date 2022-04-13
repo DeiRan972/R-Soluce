@@ -8,9 +8,22 @@ class TasksController < ApplicationController
     else
       @tasks = Task.where(project: @project).where(user: current_user)
     end
+
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "Tasks: #{@tasks.count}", template: 'tasks/tasks.html.erb', layout: 'pdf'   # Excluding ".pdf" extension.
+      end
+    end
   end
 
   def show
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "Tasks: #{@tasks.count}", template: 'tasks/tasks.html.erb', layout: 'pdf'   # Excluding ".pdf" extension.
+      end
+    end
   end
 
   def new

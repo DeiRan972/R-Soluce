@@ -20,6 +20,13 @@ class ProjectsController < ApplicationController
     if current_user.admin
       @projects = Project.all
     end
+
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "Projects: #{@projects.count}", template: 'projects/projects.html.erb', layout: 'pdf'   # Excluding ".pdf" extension.
+      end
+    end
   end
 
   def edit
@@ -36,6 +43,13 @@ class ProjectsController < ApplicationController
   def show
     @login_user = User.all
     @task = Task.new
+
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "Project_id: #{@project.id}", template: 'projects/project.html.erb', layout: 'pdf'   # Excluding ".pdf" extension.
+      end
+    end
   end
 
   def destroy

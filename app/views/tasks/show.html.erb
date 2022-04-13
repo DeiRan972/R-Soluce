@@ -23,4 +23,12 @@
     <div class="color-overlay"></div>
 </div>
 
- <%= link_to 'retour a la liste', tasks_user_path , class: "btn-show"%>
+<% if user_signed_in? %>
+  <%= link_to project_tasks_path(format: :pdf) do%>
+    <div class="btn btn-show justify-center">
+      <span> PDF Tasks </span>
+    </div>
+  <% end %>
+<% end %>
+
+<%= link_to 'retour a la liste', tasks_user_path , class: "btn-show"%>
