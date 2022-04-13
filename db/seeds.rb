@@ -21,6 +21,7 @@ p 'creating roles'
 role1 = Role.create!(level: 'JUNIOR')
 
 
+
 p 'creating users'
 user1 = User.create!(last_name: 'Manon', first_name: 'KENZO', enable: 'false', admin: 'true', email: 'manon@exemple.com', password: '12345man', role: role1 , avatar: "https://kitt.lewagon.com/placeholder/users/cveneziani")
 p user1.last_name
