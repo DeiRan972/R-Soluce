@@ -7,14 +7,14 @@
         </div>
     </div>
       <div class="card-info">
-        <p> Durée estimée : <%= @task.estimate_time %> heures </p>
+        <p> Durée estimée : <%= @task.estimate_time %> Jours </p>
         <%= link_to 'update it',edit_project_task_path(@task.project,@task)  %>
       </div>
     <div class="utility-info">
       <ul class="utility-list">
         <li><span class="licon icon-like"></span><%= @task.status %></li>
         <li><span class="licon icon-com"></span><%= @task.real_time %></li>
-        <li><span class="licon icon-dat"></span><%= @task.created_at.strftime('créer a %m/%d/%Y')%></li>
+        <li><span class="licon icon-dat"></span><%= @task.created_at.strftime('Créé à %m/%d/%Y')%></li>
         <li><span class="licon icon-tag"></span><%= @task.project.name %></li>
       </ul>
     </div>

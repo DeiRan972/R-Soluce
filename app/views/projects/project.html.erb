@@ -1,0 +1,61 @@
+
+<p>
+  <strong>Date de génération du PDF :</strong>
+  <%=  Time.now %>
+</p>
+<br>
+
+<h1 class = "project-pdf-title">Projet</h1>
+
+<div>
+  <h3>
+    <strong>
+    <%= @project.name.capitalize %>
+    </strong>
+  </h3>
+</div>
+
+<ul class="project-pdf">
+  <li><strong>Start date : </strong><%= @project.start_date.strftime('%d-%m-%Y') %></li>
+  <li><strong>End date : </strong><%= @project.end_date.strftime('%d-%m-%Y') %></li>
+  <li><strong>Déscription: </strong><%= @project.description.capitalize %> </li>
+</ul>
+<br>
+
+<div>
+  <h3>
+    <strong>Tâches du projet:</strong>
+  </h3>
+</div>
+
+<div>
+  <table>
+    <tr>
+      <th>Nom de la tâche</th>
+      <th><strong>Déscription </strong></th>
+      <th><strong>Temps estimé en heures</strong></th>
+      <th>Equipiers</th>
+      <th><strong>Status </strong></th>
+    </tr>
+
+    <% @project.tasks.each do |task|%>
+
+      <tr>
+       <td><%= task.name.capitalize %></td>
+       <td><%= task.description.capitalize %></td>
+       <td class="text-center-table-pdf"><%= task.estimate_time %></td>
+       <td class="text-center-table-pdf">
+        <% task.project.users.each do |user|%>
+        <%end %>
+        <%= task.user.last_name.upcase %>
+       </td>
+       <td class="text-center-table-pdf"><%= task.status %></td>
+      </tr>
+
+    <%end%>
+  </table>
+
+  <div class="text-center">
+    <p><strong>Nombre de tâches : </strong><%= @project.tasks.count %>  </p>
+  </div>
+</div>

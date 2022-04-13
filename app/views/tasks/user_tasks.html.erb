@@ -14,11 +14,7 @@
                   <p >Tâche : <strong><%= user_task.description %></strong></p>
                   <p> Etat : <%= user_task.status %></p>
                   <p> Temps estimer : <%= user_task.estimate_time %> - Jours</p>
-            <% end %>
-                 <i class="fa-solid fa-pen-to-square"  data-action="click->add-comment#displayComment"></i> - Ajouter un commentaire
-                </div>
-                <div class="comment d-none" data-add-comment-target="form">
-                <p>Commentaires</p>
+                <% end %>
                 </div>
               </div>
         <% end %>

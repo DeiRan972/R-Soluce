@@ -17,12 +17,15 @@
                   <p> Etat : <%= task.status %></p>
                   <p> Temps estimé : <%= task.estimate_time %> - Jours</p>
                   <% end %>
-                  <i class="fa-solid fa-pen-to-square"  data-action="click->add-comment#displayComment"></i> - Ajouter un commentaire
-                </div>
-                <div class="container chatroom d-none" data-add-comment-target="form">
-                  <%#= link_to 'Commenter', new_project_task_commentaire_path(task.project, task) %>
                 </div>
             </div>
+          <% end %>
+          <% if current_user.admin %>
+            <%= link_to project_tasks_path(format: :pdf) do%>
+              <div class="btn btn-show justify-center">
+                <span> PDF Tasks </span>
+              </div>
+            <% end %>
           <% end %>
       </div>
     </div>
