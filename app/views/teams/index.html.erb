@@ -10,7 +10,7 @@
           <%= image_tag "#{user.avatar}", class: "avatar-team border-radius :50%", alt: "avatar " %>
           <div class="card-body">
             <h3><%= user.first_name %> <%= user.last_name %></h3>
-            <p> Status - <%= user.role.level %></p>
+            <p><%= user.role.level %></p>
           </div>
         </div>
       <% end %>
