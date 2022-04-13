@@ -1,5 +1,5 @@
 
-<div class="main mx-auto">
+<div class="main mr-5">
   <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-10">
@@ -8,7 +8,7 @@
             <p class = "h5"><%= link_to project.name.upcase, project_path(project) %></p>
             <div class="card-project-infos col-8 mx-auto ">
               <div>
-                <p class = "h6 text-muted"><%= project.description %></p>
+                <p class = "h6 text-muted"><%= project.description.capitalize %></p>
               </div>
               <div>
                 <p><strong>Start date : </strong><%= project.start_date.strftime('%d-%m-%Y') %></p>

@@ -1,23 +1,23 @@
-<div class="container py-5 h-100">
+<div class="container p-5 h-100">
   <div class="row d-flex justify-content-center align-items-center h-100">
     <div class="col-12 col-md-8 col-lg-6 col-xl-5">
       <div class="card bg-dark text-white" style="border-radius: 1rem;">
         <div class="card-body p-5 text-center">
           <%= simple_form_for(@project) do |f| %>
-          <div class="form-outline form-white mb-4">
-			    	<%= f.input :name, label: false, placeholder: 'Nom du projet' %>
-          </div>
-          <div class="form-outline form-white mb-4">
-			    	<%= f.input :description, label: false, placeholder: 'Déscription' %>
-          </div>
-          <div class="form-outline form-white mb-4">
-            <%= f.input :start_date, label: false,as: :date, placeholder: 'Date de début' %>
-          </div>
-          <div class="form-outline form-white mb-4">
-            <%= f.input :end_date, label: false, as: :date, placeholder: 'Date de fin' %>
-          </div>
-			    	<%= f.submit class: 'btn btn-primary' %>
-          <%= link_to 'Annuler',  projects_path, class: 'btn btn-primary' %>
+            <div class="form-outline form-white mb-4">
+			      	<%= f.input :name, label: false, placeholder: 'Nom du projet' %>
+            </div>
+            <div class="form-outline form-white mb-4">
+			      	<%= f.input :description, label: false, placeholder: 'Déscription' %>
+            </div>
+            <div class="form-outline form-white mb-4">
+              <%= f.input :start_date, label: false,as: :date, placeholder: 'Date de début' %>
+            </div>
+            <div class="form-outline form-white mb-4">
+              <%= f.input :end_date, label: false, as: :date, placeholder: 'Date de fin' %>
+            </div>
+			      	<%= f.submit "Créer Projet", class: 'btn m-1 btn-primary' %>
+              <%= link_to 'Annuler',  projects_path, class: 'btn m-1 btn-primary' %>
 			    <% end %>
          </div>
         </div>
