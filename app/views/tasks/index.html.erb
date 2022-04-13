@@ -20,6 +20,16 @@
                 </div>
             </div>
           <% end %>
+
+          <%= link_to project_tasks_path(format: :pdf) do%>
+            <div class="btn btn-show justify-center">
+              <span> PDF Tasks </span>
+            </div>
+          <% end %>
+
+          <div class="text-center">
+            <h1>  - <%= @tasks.count %> - </h1>
+          </div>
       </div>
     </div>
   </div>
