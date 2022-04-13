@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :projects do
     resources :tasks
   end
+  resources :roles, only: %i[index create new destroy]
 end

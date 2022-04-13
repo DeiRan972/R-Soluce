@@ -1,26 +1,29 @@
-<div class="container col-6 mx-auto p-4">
-	<div class="blog-card spring-fever">
-    <div class="title-content">
-        <h3><%= @task.name.upcase %></h3>
-        <div class="intro">
-          Déscription : <%= @task.description.upcase %>
-        </div>
-    </div>
-      <div class="card-info">
-        <p> Temps estimé : <%= @task.estimate_time %> heures </p>
-          <%= link_to 'Evolution',edit_project_task_path(@task.project,@task)  %>
+<div class="main">
+  <div class="container col-6 mx-auto p-4">
+    <div class="blog-card spring-fever">
+      <div class="title-content">
+          <h3><%= @task.name.upcase %></h3>
+          <div class="intro">
+            Description : <%= @task.description.upcase %>
+          </div>
       </div>
-    <div class="utility-info">
-      <ul class="utility-list">
-        <li><span class="licon icon-like"></span><%= @task.status %></li>
-        <li><span class="licon icon-com"></span><%= @task.real_time %></li>
-        <li><span class="licon icon-dat"></span><%= @task.created_at.strftime('créer a %m/%d/%Y')%></li>
-        <li><span class="licon icon-tag"></span><%= @task.project.name %></li>
-      </ul>
+        <div class="card-info">
+          <p> Temps estimé : <%= @task.estimate_time %> -Jours </p>
+            <%= link_to 'Mise a jour',edit_project_task_path(@task.project,@task)  %>
+        </div>
+      <div class="utility-info">
+        <ul class="utility-list">
+          <li><span class="licon icon-like"></span><%= @task.status %></li>
+          <li><span class="licon icon-com"></span><%= @task.real_time %></li>
+          <li><span class="licon icon-dat"></span><%= @task.created_at.strftime('créer a %m/%d/%Y')%></li>
+          <li><span class="licon icon-tag"></span><%= @task.project.name %></li>
+        </ul>
+      </div>
     </div>
+      <div class="gradient-overlay"></div>
+      <div class="color-overlay"></div>
+      <%= link_to 'retour a la liste', tasks_user_path , class: "btn-show"%>
   </div>
-    <div class="gradient-overlay"></div>
-    <div class="color-overlay"></div>
 </div>
 
 <% if user_signed_in? %>

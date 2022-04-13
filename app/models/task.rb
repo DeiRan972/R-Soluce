@@ -3,6 +3,7 @@ class Task < ApplicationRecord
 
   belongs_to :project
   belongs_to :user
+  has_many :commentaires
   validates :name, presence: true
   validates :description, presence: true
   validates :estimate_time, presence: true

@@ -2,6 +2,9 @@
   <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-10">
+       <div class="text-center">
+            <h1>  Vous avez : <%= @tasks.count %> Tâches </h1>
+          </div>
         <% @tasks.each do |task| %>
           <%= link_to  [task.project, task] do %>
             <div class="card-user-task m-4" data-controller="add-comment">
@@ -12,16 +15,15 @@
                   <h1><%= task.name.upcase %></h1>
                   <p >Tâche : <strong><%= task.description %></strong></p>
                   <p> Etat : <%= task.status %></p>
-                  <p> Temps estimé : <%= task.estimate_time %> - heures</p>
+                  <p> Temps estimé : <%= task.estimate_time %> - Jours</p>
                   <% end %>
                   <i class="fa-solid fa-pen-to-square"  data-action="click->add-comment#displayComment"></i> - Ajouter un commentaire
                 </div>
                 <div class="container chatroom d-none" data-add-comment-target="form">
-                <p>Commentaires</p>
+                  <%#= link_to 'Commenter', new_project_task_commentaire_path(task.project, task) %>
                 </div>
             </div>
           <% end %>
-
 
           <%= link_to project_tasks_path(format: :pdf) do%>
             <div class="btn btn-show justify-center">

@@ -37,6 +37,13 @@
                     <% end %>
                   </li>
                 <% end %>
+                <% if current_user.admin %>
+                  <li>
+                    <%= link_to  roles_path, class: "btn-show m-2" do %>
+                      <i class="fa-solid fa-chess-rook"></i> Roles
+                    <% end %>
+                  </li>
+                <% end %>
             </ul>
           </div>
           <div class="mt-4">
