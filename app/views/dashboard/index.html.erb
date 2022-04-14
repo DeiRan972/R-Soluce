@@ -6,7 +6,7 @@
     <div class="task-manager">
       <div class="task-manager">
         <div class="page-content">
-          <div class="header"><strong> STATUS DES TÂCHES </div>
+          <div class="header"><strong> STATUS DES TÂCHES</div>
             <div class="container col-12 mx-auto">
             <div class="tasks-manager">
               <% @current_user_tasks.each do |task_user| %>
@@ -21,8 +21,8 @@
             </div>
         </div>
       </div>
-      <div class="container">
-        <p><strong>CALENDRIER DES PROJETS</p><%= week_calendar(number_of_weeks: 2, events: @projects, attribute: :start_date, end_attribute: :end_date) do |date, projects| %>
+     <div class="container">
+        <p>CALENDRIER DES PROJETS</p><%= week_calendar(number_of_weeks: 1, events: @projects, attribute: :start_date, end_attribute: :end_date) do |date, projects| %>
             <%= date %>
           <% projects.each do |project| %>
             <div>

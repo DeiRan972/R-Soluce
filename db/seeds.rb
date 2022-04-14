@@ -21,34 +21,36 @@ p 'creating roles'
 role1 = Role.create!(level: 'SENIOR')
 
 p 'creating users'
-user1 = User.create!(last_name: 'Donatella', first_name: 'VERSACE', enable: 'false', admin: 'true', email: 'donatella@exemple.com', password:'12345don', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/cveneziani")
+user1 = User.create!(last_name: 'Donatella', first_name: 'VERSACE', enable: 'false', admin: 'true', email: 'donatella@exemple.com', password:'12345don', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/Tashou-fwi")
 p user1.last_name
-user2 = User.create!(last_name: 'Takada', first_name: 'KENZO', enable: 'false', admin: 'false', email: 'manon@exemple.com', password: '12345man', role: role1 , avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+user2 = User.create!(last_name: 'Takada', first_name: 'KENZO', enable: 'false', admin: 'false', email: 'manon@exemple.com', password: '12345man', role: role1 , avatar:"https://kitt.lewagon.com/placeholder/users/danielle1305")
 p user2.last_name
 user3 = User.create!(last_name: 'Pierre', first_name: 'CARDIN', enable: 'false', admin: 'false', email: 'pierre@exemple.com', password:'12345pie', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/ssaunier")
 p user3.last_name
-user4 = User.create!(last_name: 'Olivier', first_name: 'ROUSTIN', enable: 'false', admin: 'false', email: 'olivier@exemple.com', password:'12345oli', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+user4 = User.create!(last_name: 'Olivier', first_name: 'ROUSTIN', enable: 'false', admin: 'false', email: 'olivier@exemple.com', password:'12345oli', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/Baptiste91")
 p user4.last_name
-user5 = User.create!(last_name: 'Jean Paul', first_name: 'GAUTHIER', enable: 'false', admin: 'false', email: 'oscar@exemple.com', password:'12345osc', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+user5 = User.create!(last_name: 'Jean Paul', first_name: 'GAUTHIER', enable: 'false', admin: 'false', email: 'oscar@exemple.com', password:'12345osc', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/Deiran972")
 p user5.last_name
-user6 = User.create!(last_name: 'Elie', first_name: 'SAAB', enable: 'false', admin: 'false', email: 'elie@exemple.com', password:'12345eli', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+user6 = User.create!(last_name: 'Elie', first_name: 'SAAB', enable: 'false', admin: 'false', email: 'elie@exemple.com', password:'12345eli', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/colineschulthess")
 p user6.last_name
-user7 = User.create!(last_name: 'Coco', first_name: 'CHANNEL', enable: 'false', admin: 'false', email: 'coco@exemple.com', password:'12345coc', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+user7 = User.create!(last_name: 'Coco', first_name: 'CHANNEL', enable: 'false', admin: 'false', email: 'coco@exemple.com', password:'12345coc', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/nadiaauger")
 p user7.last_name
-user8 = User.create!(last_name: 'Chantal', first_name: 'THOMAS', enable: 'false', admin: 'false', email: 'chantal@exemple.com', password:'12345cha', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+user8 = User.create!(last_name: 'Chantal', first_name: 'THOMAS', enable: 'false', admin: 'false', email: 'chantal@exemple.com', password:'12345cha', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/Wern-S")
 p user8.last_name
-user9 = User.create!(last_name: 'Stella', first_name: 'McCARTNEY', enable: 'false', admin: 'false', email: 'stella@exemple.com', password:'12345ste', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+user9 = User.create!(last_name: 'Stella', first_name: 'McCARTNEY', enable: 'false', admin: 'false', email: 'stella@exemple.com', password:'12345ste', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/JeanTimothee")
 p user9.last_name
-user10 = User.create!(last_name: 'John', first_name: 'GALLIANO', enable: 'false', admin: 'false', email: 'john@exemple.com', password:'12345joh', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+user10 = User.create!(last_name: 'John', first_name: 'GALLIANO', enable: 'false', admin: 'false', email: 'john@exemple.com', password:'12345joh', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/christopheridarch")
 p user10.last_name
-user11 = User.create!(last_name: 'Ninna', first_name: 'RICCI', enable: 'false', admin: 'false', email: 'nina@exemple.com', password:'12345nin', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+user11 = User.create!(last_name: 'Ninna', first_name: 'RICCI', enable: 'false', admin: 'false', email: 'nina@exemple.com', password:'12345nin', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/ApaeP")
 p user11.last_name
-user12 = User.create!(last_name: 'Thierry', first_name: 'MUGLER', enable: 'false', admin: 'false', email: 'thierry@exemple.com', password:'12345thi', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+user12 = User.create!(last_name: 'Thierry', first_name: 'MUGLER', enable: 'false', admin: 'false', email: 'thierry@exemple.com', password:'12345thi', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/DBigorre")
 p user12.last_name
-user13 = User.create!(last_name: 'Virgil', first_name: '  ABLOH', enable: 'false', admin: 'false', email: 'virgil@exemple.com', password:'12345vir', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+user13 = User.create!(last_name: 'Virgil', first_name: '  ABLOH', enable: 'false', admin: 'false', email: 'virgil@exemple.com', password:'12345vir', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/audreysufrin")
 p user13.last_name
-user14 = User.create!(last_name: 'Albert', first_name: 'ELBAZ', enable: 'false', admin: 'false', email: 'albert@exemple.com', password:'12345alb', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/bpaillard")
+user14 = User.create!(last_name: 'Albert', first_name: 'ELBAZ', enable: 'false', admin: 'false', email: 'albert@exemple.com', password:'12345alb', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/kevcha")
 p user14.last_name
+user15 = User.create!(last_name: 'Ted', first_name: 'LAPIDUS', enable: 'false', admin: 'false', email: 'ted@exemple.com', password:'12345ted', role: role1, avatar:"https://kitt.lewagon.com/placeholder/users/Papillard")
+p user15.last_name
 
 p 'creating projects'
 projet1 = Project.create!(user: user1, name: '- Map Toiture', description: 'Travaux isolation ', start_date: '14/04/2022', end_date: '14/04/2022')
