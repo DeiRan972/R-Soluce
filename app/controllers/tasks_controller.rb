@@ -22,7 +22,7 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
     @task.project = @project
     if @task.save
-      redirect_to project_tasks_path(@project), notice: 'new task create'
+      redirect_to project_path(@project), notice: 'new task create'
     else
       render :new
     end
